@@ -1,0 +1,41 @@
+<div class="jumbotron" style="padding: 2rem 1rem !important;">
+  <h1 style="margin-left: 140px;">Klienci</h1>
+</div>
+
+<div class="container" style="margin-top: 40px;">
+
+  <button type="button" class="btn btn-info float-right" style="margin-bottom: 20px; margin-right: 75px;" routerLink="/clients/add">
+    Dodaj klienta
+  </button>
+
+  <table class="table table-hover" style="margin-top: 10px;">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>Imię</th>
+      <th>Nazwisko</th>
+      <th>Nazwa firmy</th>
+      <th>NIP</th>
+      <th>Adres</th>
+      <th>Email</th>
+      <th>Operacje</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let client of clients">
+      <td>{{client.position}}</td>
+      <td>{{client.name}}</td>
+      <td>{{client.surname}}</td>
+      <td>{{client.company}}</td>
+      <td>{{client.nip}}</td>
+      <td>{{client.address}}</td>
+      <td>{{client.email}}</td>
+      <td>
+        <button type="button" class="btn btn-primary" (click)="previewClient(client)">Szczegóły</button>
+        <button type="button" class="btn btn-warning" style="margin-left:5px;" (click)="editClient(client)">Edytuj</button>
+        <button type="button" class="btn btn-danger" (click)="open(client)" style="margin-left:5px;">Usuń</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

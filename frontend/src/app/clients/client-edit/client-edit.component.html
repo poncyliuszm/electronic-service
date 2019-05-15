@@ -1,0 +1,106 @@
+<div class="jumbotron" style="padding: 2rem 1rem !important;">
+  <h1 style="margin-left: 140px;">
+    <i routerLink="/clients" class="fa fa-chevron-circle-left" style="margin-right: 40px; cursor: pointer"></i>
+    Edytuj klienta
+  </h1>
+</div>
+
+<div class="container">
+  <form #formBasic="ngForm" style="margin-top: 25px;">
+    <div class="form-group row">
+      <label for="name" class="col-2 col-form-label">Imię:</label>
+      <input [(ngModel)]="client.name" required type="text" class="col-6 form-control" [ngClass]="{'is-invalid': formBasic.submitted && name.invalid }" #name="ngModel" id="name" name="name" placeholder="Wprowadź imię">
+      <div *ngIf="formBasic.submitted && name.invalid" class="invalid-feedback d-block">
+        <div class="col-2" *ngIf="name.errors.required">Imię jest wymagane</div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="surname" class="col-2 col-form-label">Nazwisko:</label>
+      <input [(ngModel)]="client.surname" required type="text" class="col-6 form-control" [ngClass]="{'is-invalid': formBasic.submitted && surname.invalid }" #surname="ngModel" id="surname" name="surname" placeholder="Wprowadź nazwisko">
+      <div *ngIf="formBasic.submitted && surname.invalid" class="invalid-feedback d-block">
+        <div class="col-2" *ngIf="surname.errors.required">Nazwisko jest wymagane</div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="gender" class="col-2 col-form-label">Płeć:</label>
+      <input [(ngModel)]="client.gender" required type="text" class="col-6 form-control" [ngClass]="{'is-invalid': formBasic.submitted && gender.invalid }" #gender="ngModel" id="gender" name="gender" placeholder="Wprowadź płeć">
+      <div *ngIf="formBasic.submitted && gender.invalid" class="invalid-feedback d-block">
+        <div class="col-2" *ngIf="gender.errors.required">Płeć jest wymagana</div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="company" class="col-2 col-form-label">Firma:</label>
+      <input [(ngModel)]="client.company" type="text" class="col-6 form-control" id="company" name="company" placeholder="Wprowadź nazwę firmy">
+    </div>
+
+    <div class="form-group row">
+      <label for="regon" class="col-2 col-form-label">REGON:</label>
+      <input [(ngModel)]="client.regon" type="text" class="col-6 form-control" id="regon" name="regon" placeholder="Wprowadź REGON">
+    </div>
+
+    <div class="form-group row">
+      <label for="nip" class="col-2 col-form-label">NIP:</label>
+      <input [(ngModel)]="client.nip" type="text" class="col-6 form-control" id="nip" name="nip" placeholder="Wprowadź NIP">
+    </div>
+
+    <div class="form-group row">
+      <label for="city" class="col-2 col-form-label">Miasto:</label>
+      <input [(ngModel)]="client.city" required type="text" class="col-6 form-control" [ngClass]="{'is-invalid': formBasic.submitted && city.invalid }" #city="ngModel" id="city" name="city" placeholder="Wprowadź miasto">
+      <div *ngIf="formBasic.submitted && city.invalid" class="invalid-feedback d-block">
+        <div class="col-2" *ngIf="city.errors.required">Miasto jest wymagane</div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="postalCode" class="col-2 col-form-label">Kod pocztowy:</label>
+      <input [(ngModel)]="client.postalCode" required type="text" class="col-6 form-control" [ngClass]="{'is-invalid': formBasic.submitted && postalCode.invalid }" #postalCode="ngModel" id="postalCode" name="postalCode" placeholder="Wprowadź kod pocztowy">
+      <div *ngIf="formBasic.submitted && postalCode.invalid" class="invalid-feedback d-block">
+        <div class="col-2" *ngIf="postalCode.errors.required">Kod pocztowy jest wymagany</div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="street" class="col-2 col-form-label">Ulica i numer domu:</label>
+      <input [(ngModel)]="client.street" type="text" class="col-6 form-control" id="street" name="street" placeholder="Wprowadź ulicę i numer domu">
+    </div>
+
+    <div class="form-group row">
+      <label for="phone1" class="col-2 col-form-label">Numer telefonu:</label>
+      <input [(ngModel)]="client.phone1" required type="text" class="col-6 form-control" [ngClass]="{'is-invalid': formBasic.submitted && phone1.invalid }" #phone1="ngModel" id="phone1" name="phone1" placeholder="Wprowadź numer tel.">
+      <div *ngIf="formBasic.submitted && phone1.invalid" class="invalid-feedback d-block">
+        <div class="col-2" *ngIf="phone1.errors.required">Numer telefonu jest wymagany</div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="phone2" class="col-2 col-form-label">Dodatkowy numer telefonu:</label>
+      <input [(ngModel)]="client.phone2" type="text" class="col-6 form-control" id="phone2" name="phone2" placeholder="Wprowadź dodatkowy numer tel.">
+    </div>
+
+    <div class="form-group row">
+      <label for="fax" class="col-2 col-form-label">Fax</label>
+      <input [(ngModel)]="client.fax" type="text" class="col-6 form-control" id="fax" name="fax" placeholder="Wprowadź fax">
+    </div>
+
+    <div class="form-group row">
+      <label for="email" class="col-2 col-form-label">E-mail</label>
+      <input [(ngModel)]="client.email" type="email" class="col-6 form-control" id="email" name="email" placeholder="Wprowadź adres e-mail">
+    </div>
+
+    <div class="form-group row">
+      <label for="www" class="col-2 col-form-label">Strona internetowa</label>
+      <input [(ngModel)]="client.www" type="text" class="col-6 form-control" id="www" name="www" placeholder="Wprowadź stronę internetową">
+    </div>
+
+
+    <div class="form-group row" style="margin-top: 40px;">
+      <label class="col-7 col-form-label"></label>
+      <button type="submit" (click)="save(formBasic)" class="btn btn-success float-right col-1 form-control">Zapisz</button>
+    </div>
+
+  </form>
+
+</div>
