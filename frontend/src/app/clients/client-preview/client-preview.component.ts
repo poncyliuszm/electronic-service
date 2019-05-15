@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ClientService} from "../../services/client.service";
 import {ActivatedRoute, Router} from "@angular/router";
-import {ToastrService} from "ngx-toastr";
 
 @Component({
   selector: 'app-client-preview',
@@ -31,7 +30,8 @@ export class ClientPreviewComponent implements OnInit {
 
   constructor(private clientService: ClientService,
               private router: Router,
-              private activatedRoute: ActivatedRoute) { }
+              private activatedRoute: ActivatedRoute) {
+  }
 
   ngOnInit() {
     this.getClient();

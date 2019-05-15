@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {ClientService} from "../../services/client.service";
 import {Router} from "@angular/router";
 import {ToastrService} from "ngx-toastr";
+import {ClientService} from "../../services/client.service";
 
 @Component({
   selector: 'app-client-add',

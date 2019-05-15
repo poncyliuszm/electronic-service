@@ -12,10 +12,9 @@ import {ToastrService} from "ngx-toastr";
 })
 export class ClientsComponent implements OnInit {
   clients: any;
-  // $: any;
 
   constructor(private http: HttpClient,
-              private clientsService: ClientService,
+              private clientService: ClientService,
               private router: Router,
               private toastr: ToastrService,
               private modalService: NgbModal) {
@@ -26,7 +25,7 @@ export class ClientsComponent implements OnInit {
   }
 
   getClients() {
-    this.clientsService.list()
+    this.clientService.list()
       .subscribe((data: any) => {
         let counter = 1;
         data.forEach(c => c['position'] = counter++);
@@ -43,9 +42,9 @@ export class ClientsComponent implements OnInit {
   }
 
   open(client) {
-    const modalRef = this.modalService.open(NgbdModalContent).result.then(result => {
+    const modalRef = this.modalService.open(ClientDeleteModal).result.then(result => {
       if(result === 'true') {
-        this.clientsService.delete(client.id)
+        this.clientService.delete(client.id)
           .subscribe((data:any) => {
             this.getClients();
             this.showDeleteToaster()
@@ -62,7 +61,7 @@ export class ClientsComponent implements OnInit {
 }
 
 @Component({
-  selector: 'ngbd-modal-content',
+  selector: 'client-delete-modal',
   template: `
     <div class="modal-header">
       <h4 class="modal-title" id="modal-title">Usunięcie klienta</h4>
@@ -79,7 +78,7 @@ export class ClientsComponent implements OnInit {
     </div>
   `
 })
-export class NgbdModalContent {
+export class ClientDeleteModal {
   @Input() name;
 
   constructor(public activeModal: NgbActiveModal) {}

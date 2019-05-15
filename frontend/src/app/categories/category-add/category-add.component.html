@@ -1,0 +1,27 @@
+<div class="jumbotron" style="padding: 2rem 1rem !important;">
+  <h1 style="margin-left: 140px;">
+    <i routerLink="/categories" class="fa fa-chevron-circle-left" style="margin-right: 40px; cursor: pointer"></i>
+    Dodaj kategorię produktu
+  </h1>
+</div>
+
+<div class="container">
+  <form #formBasic="ngForm" style="margin-top: 25px;">
+    <div class="form-group row">
+      <label for="name" class="col-2 col-form-label">Nazwa:</label>
+      <input [(ngModel)]="category.name" required type="text" class="col-6 form-control" [ngClass]="{'is-invalid': formBasic.submitted && name.invalid }" #name="ngModel" id="name" name="name" placeholder="Wprowadź nazwę kategorii">
+      <div *ngIf="formBasic.submitted && name.invalid" class="invalid-feedback d-block">
+        <div class="col-2" *ngIf="name.errors.required">Nazwa jest wymagana</div>
+      </div>
+    </div>
+
+
+    <div class="form-group row" style="margin-top: 40px;">
+      <label class="col-7 col-form-label"></label>
+      <button type="submit" (click)="addCategory(formBasic)" class="btn btn-success float-right col-1 form-control">Dodaj</button>
+    </div>
+
+  </form>
+
+
+</div>
