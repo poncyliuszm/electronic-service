@@ -19,6 +19,11 @@ import {CategoryAddComponent} from "./categories/category-add/category-add.compo
 import {CategoryEditComponent} from "./categories/category-edit/category-edit.component";
 import {CategoryPreviewComponent} from "./categories/category-preview/category-preview.component";
 import {CategoryService} from "./services/category.service";
+import {ProducerDeleteModal, ProducersComponent} from "./producers/producers.component";
+import {ProducerAddComponent} from "./producers/producer-add/producer-add.component";
+import {ProducerEditComponent} from "./producers/producer-edit/producer-edit.component";
+import {ProducerPreviewComponent} from "./producers/producer-preview/producer-preview.component";
+import {ProducerService} from "./services/producer.service";
 
 @NgModule({
   declarations: [
@@ -33,11 +38,17 @@ import {CategoryService} from "./services/category.service";
     CategoryEditComponent,
     CategoryPreviewComponent,
     ClientDeleteModal,
-    CategoryDeleteModal
+    CategoryDeleteModal,
+    ProducerDeleteModal,
+    ProducersComponent,
+    ProducerAddComponent,
+    ProducerEditComponent,
+    ProducerPreviewComponent
   ],
   entryComponents: [
     ClientDeleteModal,
-    CategoryDeleteModal
+    CategoryDeleteModal,
+    ProducerDeleteModal
   ],
   imports: [
     BrowserModule,
@@ -54,7 +65,8 @@ import {CategoryService} from "./services/category.service";
   ],
   providers: [
     ClientService,
-    CategoryService
+    CategoryService,
+    ProducerService
   ],
   bootstrap: [AppComponent]
 })

@@ -31,13 +31,13 @@ public class CategoryController {
     }
 
     @PostMapping("/save")
-    public void save(@RequestBody Category client) {
-        categoryRepository.save(client);
+    public void save(@RequestBody Category category) {
+        categoryRepository.save(category);
     }
 
     @PutMapping()
-    public Category update(@RequestBody Category client) {
-        return categoryRepository.save(client);
+    public Category update(@RequestBody Category category) {
+        return categoryRepository.save(category);
     }
 
     @DeleteMapping("/{id}")
