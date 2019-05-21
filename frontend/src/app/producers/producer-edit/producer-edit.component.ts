@@ -1,22 +1,22 @@
 import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {ToastrService} from "ngx-toastr";
-import {CategoryService} from "../../services/category.service";
+import {ProducerService} from "../../services/producer.service";
 
 @Component({
-  selector: 'app-category-edit',
+  selector: 'app-producer-edit',
   templateUrl: './producer-edit.component.html',
   styleUrls: ['./producer-edit.component.css']
 })
 export class ProducerEditComponent implements OnInit {
 
-  category = {
+  producer = {
     name: ""
   };
 
-  categoryId;
+  producerId;
 
-  constructor(private categoryService: CategoryService,
+  constructor(private producerService: ProducerService,
               private router: Router,
               private activatedRoute: ActivatedRoute,
               private toastr: ToastrService,
@@ -26,31 +26,31 @@ export class ProducerEditComponent implements OnInit {
 
   ngOnInit() {
     this.changeDetectorRef.detectChanges(); //add this because conent is not updating in custom notification
-    this.getCategory();
+    this.getProducer();
   }
 
-  getCategory() {
+  getProducer() {
     this.activatedRoute.params.subscribe(params => {
-      this.categoryId = +params['id'];
-      this.categoryService.getCategory(this.categoryId)
-        .subscribe((category: any) => {
-          this.category = category;
+      this.producerId = +params['id'];
+      this.producerService.getProducer(this.producerId)
+        .subscribe((producer: any) => {
+          this.producer = producer;
         })
     });
   }
 
   save(form) {
     if (form.valid) {
-      this.categoryService.update(this.category)
+      this.producerService.update(this.producer)
         .subscribe((data: any) => {
-          this.router.navigate(['/categories']);
+          this.router.navigate(['/producers']);
           this.showToaster();
         });
     }
   }
 
   showToaster() {
-    this.toastr.success("Pomyślnie zaktualizowano kategorię produktu", "");
+    this.toastr.success("Pomyślnie zaktualizowano producenta", "");
   }
 
 }

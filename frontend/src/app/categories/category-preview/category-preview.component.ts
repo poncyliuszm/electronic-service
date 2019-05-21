@@ -21,10 +21,10 @@ export class CategoryPreviewComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getClient();
+    this.getCategory();
   }
 
-  getClient() {
+  getCategory() {
     this.activatedRoute.params.subscribe(params => {
       this.categoryId = +params['id'];
       this.categoryService.getCategory(this.categoryId)

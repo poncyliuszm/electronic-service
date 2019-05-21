@@ -1,20 +1,20 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {ToastrService} from "ngx-toastr";
-import {CategoryService} from "../../services/category.service";
+import {ProducerService} from "../../services/producer.service";
 
 @Component({
-  selector: 'app-category-add',
+  selector: 'app-producer-add',
   templateUrl: './producer-add.component.html',
   styleUrls: ['./producer-add.component.css']
 })
 export class ProducerAddComponent implements OnInit {
 
-  category = {
+  producer = {
     name: ""
   };
 
-  constructor(private categoryService: CategoryService,
+  constructor(private producerService: ProducerService,
               private router: Router,
               private toastr: ToastrService) {
   }
@@ -23,18 +23,18 @@ export class ProducerAddComponent implements OnInit {
 
   }
 
-  addCategory(form) {
+  addProducer(form) {
     if (form.valid) {
-      this.categoryService.save(this.category)
+      this.producerService.save(this.producer)
         .subscribe((data: any) => {
-          this.router.navigate(['/categories']);
+          this.router.navigate(['/producers']);
           this.showToaster();
         });
     }
   }
 
   showToaster() {
-    this.toastr.success("Pomyślnie dodano kategorię produktu", "");
+    this.toastr.success("Pomyślnie dodano producenta", "");
   }
 
 }

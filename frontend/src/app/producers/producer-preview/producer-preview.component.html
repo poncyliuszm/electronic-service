@@ -1,7 +1,7 @@
 <div class="jumbotron" style="padding: 2rem 1rem !important;">
   <h1 style="margin-left: 140px;">
-    <i class="fa fa-chevron-circle-left" routerLink="/categories" style="margin-right: 40px; cursor: pointer"></i>
-    Szczegóły kategorii produktu
+    <i class="fa fa-chevron-circle-left" routerLink="/producers" style="margin-right: 40px; cursor: pointer"></i>
+    Szczegóły producenta
   </h1>
 </div>
 
@@ -9,7 +9,7 @@
   <form #formBasic="ngForm" style="margin-top: 25px;">
     <div class="form-group row">
       <label class="col-2 col-form-label" for="name">Nazwa:</label>
-      <input #name="ngModel" [(ngModel)]="category.name"
+      <input #name="ngModel" [(ngModel)]="producer.name"
              [ngClass]="{'is-invalid': formBasic.submitted && name.invalid }" class="col-6 form-control" disabled
              id="name" name="name" required type="text">
       <div *ngIf="formBasic.submitted && name.invalid" class="invalid-feedback d-block">
