@@ -1,0 +1,72 @@
+<div class="jumbotron" style="padding: 2rem 1rem !important;">
+  <h1 style="margin-left: 140px;">
+    <i class="fa fa-chevron-circle-left" routerLink="/products" style="margin-right: 40px; cursor: pointer"></i>
+    Dodaj produkt
+  </h1>
+</div>
+
+<div class="container">
+  <form #formBasic="ngForm" style="margin-top: 25px;">
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label" for="category">Kategoria:</label>
+      <select #category="ngModel" [(ngModel)]="product.categoryId"
+              [ngClass]="{'is-invalid': formBasic.submitted && category.invalid }" class="col-6 form-control"
+              id="category"
+              name="category" required>
+        <option *ngFor="let cat of categories" [value]="cat.id">{{cat.name}}</option>
+      </select>
+      <div *ngIf="formBasic.submitted && category.invalid" class="invalid-feedback d-block">
+        <div *ngIf="category.errors.required" class="col-2">Kategoria jest wymagana</div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label" for="category">Producent:</label>
+      <select #producer="ngModel" [(ngModel)]="product.producerId"
+              [ngClass]="{'is-invalid': formBasic.submitted && producer.invalid }" class="col-6 form-control"
+              id="producer"
+              name="producer" required>
+        <option *ngFor="let producer of producers" [value]="producer.id">{{producer.name}}</option>
+      </select>
+      <div *ngIf="formBasic.submitted && producer.invalid" class="invalid-feedback d-block">
+        <div *ngIf="producer.errors.required" class="col-2">Producent jest wymagany</div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label" for="type">Typ:</label>
+      <input #type="ngModel" [(ngModel)]="product.type" [ngClass]="{'is-invalid': formBasic.submitted && type.invalid }"
+             class="col-6 form-control"
+             id="type" name="type" placeholder="Wprowadź typ" required
+             type="text">
+      <div *ngIf="formBasic.submitted && type.invalid" class="invalid-feedback d-block">
+        <div *ngIf="type.errors.required" class="col-2">Typ jest wymagany</div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label" for="type">Wersja:</label>
+      <input [(ngModel)]="product.version" class="col-6 form-control" id="version" name="version"
+             placeholder="Wprowadź wersję"
+             type="text">
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label" for="type">Opis:</label>
+      <input [(ngModel)]="product.description" class="col-6 form-control" id="description" name="description"
+             placeholder="Wprowadź opis"
+             type="text">
+    </div>
+
+    <div class="form-group row" style="margin-top: 40px;">
+      <label class="col-7 col-form-label"></label>
+      <button (click)="addProduct(formBasic)" class="btn btn-success float-right col-1 form-control" type="submit">
+        Dodaj
+      </button>
+    </div>
+
+  </form>
+
+
+</div>
