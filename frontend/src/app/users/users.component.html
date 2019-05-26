@@ -1,0 +1,42 @@
+<div class="jumbotron" style="padding: 2rem 1rem !important;">
+  <h1 style="margin-left: 140px;">Pracownicy</h1>
+</div>
+
+<div class="container" style="margin-top: 40px;">
+
+  <button class="btn btn-info float-right" routerLink="/users/add" style="margin-bottom: 20px; margin-right: 75px;"
+          type="button">
+    Dodaj pracownika
+  </button>
+
+  <table class="table table-hover" style="margin-top: 10px;">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>Imię</th>
+      <th>Nazwisko</th>
+      <th>Login</th>
+      <th>NIP</th>
+      <th>Adres</th>
+      <th>Email</th>
+      <th>Operacje</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{user.position}}</td>
+      <td>{{user.client.name}}</td>
+      <td>{{user.client.surname}}</td>
+      <td>{{user.login}}</td>
+      <td>{{user.client.nip}}</td>
+      <td>{{user.client.city}}</td>
+      <td>{{user.email}}</td>
+      <td>
+        <button (click)="previewUser(user)" class="btn btn-primary" type="button">Szczegóły</button>
+        <button (click)="editUser(user)" class="btn btn-warning" style="margin-left:5px;" type="button">Edytuj</button>
+        <button (click)="open(user)" class="btn btn-danger" style="margin-left:5px;" type="button">Usuń</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

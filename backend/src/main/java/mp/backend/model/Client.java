@@ -53,6 +53,25 @@ public class Client {
     @Column(name = "WWW")
     private String site;
 
+    public Client() {
+    }
+
+    public Client(Client client) {
+        this.name = client.name;
+        this.surname = client.surname;
+        this.gender = client.gender;
+        this.company = client.company;
+        this.regon = client.regon;
+        this.nip = client.nip;
+        this.city = client.city;
+        this.postalCode = client.postalCode;
+        this.street = client.street;
+        this.phone1 = client.phone1;
+        this.phone2 = client.phone2;
+        this.fax = client.fax;
+        this.email = client.email;
+        this.site = client.site;
+    }
 
     public Integer getId() {
         return id;

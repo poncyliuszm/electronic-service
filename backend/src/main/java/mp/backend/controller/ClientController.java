@@ -21,7 +21,7 @@ public class ClientController {
 
     @GetMapping("/list")
     public List<Client> list() {
-        return clientRepository.findAll();
+        return clientRepository.findAllWithoutUsers();
     }
 
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})

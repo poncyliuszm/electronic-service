@@ -24,6 +24,16 @@ import {ProducerAddComponent} from "./producers/producer-add/producer-add.compon
 import {ProducerEditComponent} from "./producers/producer-edit/producer-edit.component";
 import {ProducerPreviewComponent} from "./producers/producer-preview/producer-preview.component";
 import {ProducerService} from "./services/producer.service";
+import {ProductDeleteModal, ProductsComponent} from "./products/products.component";
+import {ProductAddComponent} from "./products/product-add/product-add.component";
+import {ProductEditComponent} from "./products/product-edit/product-edit.component";
+import {ProductPreviewComponent} from "./products/product-preview/product-preview.component";
+import {ProductService} from "./services/product.service";
+import {UserDeleteModal, UsersComponent} from "./users/users.component";
+import {UserPreviewComponent} from "./users/user-preview/user-preview.component";
+import {UserEditComponent} from "./users/user-edit/user-edit.component";
+import {UserAddComponent} from "./users/user-add/user-add.component";
+import {UserService} from "./services/user.service";
 
 @NgModule({
   declarations: [
@@ -40,15 +50,27 @@ import {ProducerService} from "./services/producer.service";
     ClientDeleteModal,
     CategoryDeleteModal,
     ProducerDeleteModal,
+    ProductDeleteModal,
+    UserDeleteModal,
     ProducersComponent,
     ProducerAddComponent,
     ProducerEditComponent,
-    ProducerPreviewComponent
+    ProducerPreviewComponent,
+    ProductsComponent,
+    ProductAddComponent,
+    ProductEditComponent,
+    ProductPreviewComponent,
+    UsersComponent,
+    UserAddComponent,
+    UserEditComponent,
+    UserPreviewComponent
   ],
   entryComponents: [
     ClientDeleteModal,
     CategoryDeleteModal,
-    ProducerDeleteModal
+    ProducerDeleteModal,
+    ProductDeleteModal,
+    UserDeleteModal
   ],
   imports: [
     BrowserModule,
@@ -66,7 +88,9 @@ import {ProducerService} from "./services/producer.service";
   providers: [
     ClientService,
     CategoryService,
-    ProducerService
+    ProducerService,
+    ProductService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })
