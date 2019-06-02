@@ -1,0 +1,42 @@
+<div class="jumbotron" style="padding: 2rem 1rem !important;">
+  <h1 style="margin-left: 140px;">Zlecenia</h1>
+</div>
+
+<div class="container" style="margin-top: 40px;">
+
+  <button class="btn btn-info float-right" routerLink="/orders/add" style="margin-bottom: 20px; margin-right: 75px;"
+          type="button">
+    Dodaj zlecenie
+  </button>
+
+  <table class="table table-hover" style="margin-top: 10px;">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>Klient</th>
+      <th>Pracownik</th>
+      <th>Produkt</th>
+      <th>Opis uszkodzenia</th>
+      <th>Data przyjęcia</th>
+      <th>Data wydania</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let order of orders">
+      <td>{{order.position}}</td>
+      <td>{{order.client.name}} {{order.client.surname}}</td>
+      <td>{{order.user.client.name}} {{order.user.client.surname}}</td>
+      <td>{{order.product.type}}-{{order.product.version}}</td>
+      <td>{{order.description}}</td>
+      <td>{{order.acceptanceDate}}</td>
+      <td>{{order.releaseDate}}</td>
+      <td>
+        <button (click)="previewOrder(order)" class="btn btn-primary" type="button">Szczegóły</button>
+        <button (click)="editOrder(order)" class="btn btn-warning" style="margin-left:5px;" type="button">Edytuj
+        </button>
+        <button (click)="open(order)" class="btn btn-danger" style="margin-left:5px;" type="button">Usuń</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

@@ -21,6 +21,10 @@ import {UsersComponent} from "./users/users.component";
 import {UserAddComponent} from "./users/user-add/user-add.component";
 import {UserEditComponent} from "./users/user-edit/user-edit.component";
 import {UserPreviewComponent} from "./users/user-preview/user-preview.component";
+import {OrdersComponent} from "./orders/orders.component";
+import {OrderAddComponent} from "./orders/order-add/order-add.component";
+import {OrderEditComponent} from "./orders/order-edit/order-edit.component";
+import {OrderPreviewComponent} from "./orders/order-preview/order-preview.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -44,7 +48,11 @@ const routes: Routes = [
   {path: 'users', component: UsersComponent},
   {path: 'users/add', component: UserAddComponent},
   {path: 'users/edit/:id', component: UserEditComponent},
-  {path: 'users/preview/:id', component: UserPreviewComponent}
+  {path: 'users/preview/:id', component: UserPreviewComponent},
+  {path: 'orders', component: OrdersComponent},
+  {path: 'orders/add', component: OrderAddComponent},
+  {path: 'orders/edit/:id', component: OrderEditComponent},
+  {path: 'orders/preview/:id', component: OrderPreviewComponent}
 ];
 
 @NgModule({

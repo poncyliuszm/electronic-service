@@ -1,0 +1,93 @@
+<div class="jumbotron" style="padding: 2rem 1rem !important;">
+  <h1 style="margin-left: 140px;">
+    <i class="fa fa-chevron-circle-left" routerLink="/orders" style="margin-right: 40px; cursor: pointer"></i>
+    Dodaj zlecenie
+  </h1>
+</div>
+
+<div class="container">
+  <form #formBasic="ngForm" style="margin-top: 25px;">
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label" for="client">Klient:</label>
+      <select #client="ngModel" [(ngModel)]="order.clientId"
+              [ngClass]="{'is-invalid': formBasic.submitted && client.invalid }" class="col-6 form-control"
+              id="client"
+              name="client" required>
+        <option *ngFor="let client of clients" [value]="client.id">{{client.name}} {{client.surname}}</option>
+      </select>
+      <div *ngIf="formBasic.submitted && client.invalid" class="invalid-feedback d-block">
+        <div *ngIf="client.errors.required" class="col-2">Klient jest wymagany</div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label" for="user">Pracownik:</label>
+      <select #user="ngModel" [(ngModel)]="order.userId"
+              [ngClass]="{'is-invalid': formBasic.submitted && user.invalid }" class="col-6 form-control"
+              id="user"
+              name="user" required>
+        <option *ngFor="let user of users" [value]="user.id">{{user.client.name}} {{user.client.surname}}</option>
+      </select>
+      <div *ngIf="formBasic.submitted && user.invalid" class="invalid-feedback d-block">
+        <div *ngIf="user.errors.required" class="col-2">Pracownik jest wymagany</div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label" for="product">Produkt:</label>
+      <select #product="ngModel" [(ngModel)]="order.productId"
+              [ngClass]="{'is-invalid': formBasic.submitted && product.invalid }" class="col-6 form-control"
+              id="product"
+              name="product" required>
+        <option *ngFor="let product of products" [value]="product.id">{{product.description}}-{{product.version}}-
+        </option>
+      </select>
+      <div *ngIf="formBasic.submitted && product.invalid" class="invalid-feedback d-block">
+        <div *ngIf="product.errors.required" class="col-2">Produkt jest wymagany</div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label" for="description">Opis uszkodzenia:</label>
+      <input #description="ngModel" [(ngModel)]="order.description"
+             [ngClass]="{'is-invalid': formBasic.submitted && description.invalid }"
+             class="col-6 form-control"
+             description="text" id="description" name="description" placeholder="Wprowadź opis uszkodzenia"
+             required>
+      <div *ngIf="formBasic.submitted && description.invalid" class="invalid-feedback d-block">
+        <div *ngIf="description.errors.required" class="col-2">Opis uszkodzenia jest wymagany</div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label" for="acceptanceDate">Data przyjęcia:</label>
+      <input #acceptanceDate="ngModel" #d1="ngbDatepicker" [(ngModel)]="order.acceptanceDate"
+             [ngClass]="{'is-invalid': formBasic.submitted && acceptanceDate.invalid }" class="col-6 form-control"
+             id="acceptanceDate"
+             name="acceptanceDate" ngbDatepicker placeholder="yyyy-mm-dd" required>
+      <button (click)="d1.toggle()" class="btn btn-outline-secondary fa fa-calendar" type="button"></button>
+      <div *ngIf="formBasic.submitted && acceptanceDate.invalid" class="invalid-feedback d-block">
+        <div *ngIf="acceptanceDate.errors.required" class="col-2">Data przyjęcia jest wymagana</div>
+      </div>
+    </div>
+
+    <!--    <div class="form-group row">-->
+    <!--      <label class="col-2 col-form-label" for="releaseDate">Data wydania:</label>-->
+    <!--      <input class="col-6 form-control" placeholder="yyyy-mm-dd" id="releaseDate"-->
+    <!--             name="releaseDate" [(ngModel)]="order.releaseDate" ngbDatepicker #d="ngbDatepicker">-->
+    <!--      <button class="btn btn-outline-secondary fa fa-calendar" (click)="d.toggle()" type="button"></button>-->
+    <!--    </div>-->
+
+
+    <div class="form-group row" style="margin-top: 40px;">
+      <label class="col-7 col-form-label"></label>
+      <button (click)="addOrder(formBasic)" class="btn btn-success float-right col-1 form-control" type="submit">
+        Dodaj
+      </button>
+    </div>
+
+  </form>
+
+
+</div>

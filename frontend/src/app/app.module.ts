@@ -13,7 +13,7 @@ import {FormsModule} from "@angular/forms";
 import {ClientPreviewComponent} from './clients/client-preview/client-preview.component';
 import {ToastrModule} from "ngx-toastr";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import {NgbDateAdapter, NgbDateNativeAdapter, NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {CategoriesComponent, CategoryDeleteModal} from "./categories/categories.component";
 import {CategoryAddComponent} from "./categories/category-add/category-add.component";
 import {CategoryEditComponent} from "./categories/category-edit/category-edit.component";
@@ -34,6 +34,11 @@ import {UserPreviewComponent} from "./users/user-preview/user-preview.component"
 import {UserEditComponent} from "./users/user-edit/user-edit.component";
 import {UserAddComponent} from "./users/user-add/user-add.component";
 import {UserService} from "./services/user.service";
+import {OrderPreviewComponent} from "./orders/order-preview/order-preview.component";
+import {OrderEditComponent} from "./orders/order-edit/order-edit.component";
+import {OrderAddComponent} from "./orders/order-add/order-add.component";
+import {OrderDeleteModal, OrdersComponent} from "./orders/orders.component";
+import {OrderService} from "./services/order.service";
 
 @NgModule({
   declarations: [
@@ -52,6 +57,7 @@ import {UserService} from "./services/user.service";
     ProducerDeleteModal,
     ProductDeleteModal,
     UserDeleteModal,
+    OrderDeleteModal,
     ProducersComponent,
     ProducerAddComponent,
     ProducerEditComponent,
@@ -63,14 +69,19 @@ import {UserService} from "./services/user.service";
     UsersComponent,
     UserAddComponent,
     UserEditComponent,
-    UserPreviewComponent
+    UserPreviewComponent,
+    OrdersComponent,
+    OrderAddComponent,
+    OrderEditComponent,
+    OrderPreviewComponent
   ],
   entryComponents: [
     ClientDeleteModal,
     CategoryDeleteModal,
     ProducerDeleteModal,
     ProductDeleteModal,
-    UserDeleteModal
+    UserDeleteModal,
+    OrderDeleteModal
   ],
   imports: [
     BrowserModule,
@@ -90,7 +101,9 @@ import {UserService} from "./services/user.service";
     CategoryService,
     ProducerService,
     ProductService,
-    UserService
+    UserService,
+    OrderService,
+    {provide: NgbDateAdapter, useClass: NgbDateNativeAdapter}
   ],
   bootstrap: [AppComponent]
 })
