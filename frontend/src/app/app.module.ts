@@ -44,6 +44,11 @@ import {DocumentTypeEditComponent} from "./document-types/document-type-edit/doc
 import {DocumentTypeAddComponent} from "./document-types/document-type-add/document-type-add.component";
 import {DocumentTypeDeleteModal, DocumentTypesComponent} from "./document-types/document-types.component";
 import {DocumentTypeService} from "./services/document-type.service";
+import {PaymentTypePreviewComponent} from "./payment-types/payment-type-preview/payment-type-preview.component";
+import {PaymentTypeEditComponent} from "./payment-types/payment-type-edit/payment-type-edit.component";
+import {PaymentTypeAddComponent} from "./payment-types/payment-type-add/payment-type-add.component";
+import {PaymentTypeDeleteModal, PaymentTypesComponent} from "./payment-types/payment-types.component";
+import {PaymentTypeService} from "./services/payment-type.service";
 
 @NgModule({
   declarations: [
@@ -64,6 +69,7 @@ import {DocumentTypeService} from "./services/document-type.service";
     UserDeleteModal,
     OrderDeleteModal,
     DocumentTypeDeleteModal,
+    PaymentTypeDeleteModal,
     ProducersComponent,
     ProducerAddComponent,
     ProducerEditComponent,
@@ -83,7 +89,11 @@ import {DocumentTypeService} from "./services/document-type.service";
     DocumentTypesComponent,
     DocumentTypeAddComponent,
     DocumentTypeEditComponent,
-    DocumentTypePreviewComponent
+    DocumentTypePreviewComponent,
+    PaymentTypesComponent,
+    PaymentTypeAddComponent,
+    PaymentTypeEditComponent,
+    PaymentTypePreviewComponent
   ],
   entryComponents: [
     ClientDeleteModal,
@@ -92,7 +102,8 @@ import {DocumentTypeService} from "./services/document-type.service";
     ProductDeleteModal,
     UserDeleteModal,
     OrderDeleteModal,
-    DocumentTypeDeleteModal
+    DocumentTypeDeleteModal,
+    PaymentTypeDeleteModal
   ],
   imports: [
     BrowserModule,
@@ -115,6 +126,7 @@ import {DocumentTypeService} from "./services/document-type.service";
     UserService,
     OrderService,
     DocumentTypeService,
+    PaymentTypeService,
     {provide: NgbDateAdapter, useClass: NgbDateNativeAdapter}
   ],
   bootstrap: [AppComponent]

@@ -29,6 +29,10 @@ import {DocumentTypesComponent} from "./document-types/document-types.component"
 import {DocumentTypeAddComponent} from "./document-types/document-type-add/document-type-add.component";
 import {DocumentTypeEditComponent} from "./document-types/document-type-edit/document-type-edit.component";
 import {DocumentTypePreviewComponent} from "./document-types/document-type-preview/document-type-preview.component";
+import {PaymentTypesComponent} from "./payment-types/payment-types.component";
+import {PaymentTypeAddComponent} from "./payment-types/payment-type-add/payment-type-add.component";
+import {PaymentTypeEditComponent} from "./payment-types/payment-type-edit/payment-type-edit.component";
+import {PaymentTypePreviewComponent} from "./payment-types/payment-type-preview/payment-type-preview.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -60,7 +64,11 @@ const routes: Routes = [
   {path: 'documentTypes', component: DocumentTypesComponent},
   {path: 'documentTypes/add', component: DocumentTypeAddComponent},
   {path: 'documentTypes/edit/:id', component: DocumentTypeEditComponent},
-  {path: 'documentTypes/preview/:id', component: DocumentTypePreviewComponent}
+  {path: 'documentTypes/preview/:id', component: DocumentTypePreviewComponent},
+  {path: 'paymentTypes', component: PaymentTypesComponent},
+  {path: 'paymentTypes/add', component: PaymentTypeAddComponent},
+  {path: 'paymentTypes/edit/:id', component: PaymentTypeEditComponent},
+  {path: 'paymentTypes/preview/:id', component: PaymentTypePreviewComponent}
 ];
 
 @NgModule({

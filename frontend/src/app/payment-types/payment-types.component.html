@@ -1,0 +1,33 @@
+<div class="jumbotron" style="padding: 2rem 1rem !important;">
+  <h1 style="margin-left: 140px;">Formy płatności</h1>
+</div>
+
+<div class="container" style="margin-top: 40px;">
+
+  <button class="btn btn-info float-right" routerLink="/paymentTypes/add"
+          style="margin-bottom: 20px; margin-right: 75px;" type="button">
+    Dodaj formę płatności
+  </button>
+
+  <table class="table table-hover" style="margin-top: 10px;">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>Nazwa</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let paymentType of paymentTypes">
+      <td>{{paymentType.position}}</td>
+      <td>{{paymentType.name}}</td>
+      <td>
+        <button (click)="previewPaymentType(paymentType)" class="btn btn-primary" type="button">Szczegóły</button>
+        <button (click)="editPaymentType(paymentType)" class="btn btn-warning" style="margin-left:5px;" type="button">
+          Edytuj
+        </button>
+        <button (click)="open(paymentType)" class="btn btn-danger" style="margin-left:5px;" type="button">Usuń</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
