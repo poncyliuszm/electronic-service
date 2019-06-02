@@ -25,6 +25,10 @@ import {OrdersComponent} from "./orders/orders.component";
 import {OrderAddComponent} from "./orders/order-add/order-add.component";
 import {OrderEditComponent} from "./orders/order-edit/order-edit.component";
 import {OrderPreviewComponent} from "./orders/order-preview/order-preview.component";
+import {DocumentTypesComponent} from "./document-types/document-types.component";
+import {DocumentTypeAddComponent} from "./document-types/document-type-add/document-type-add.component";
+import {DocumentTypeEditComponent} from "./document-types/document-type-edit/document-type-edit.component";
+import {DocumentTypePreviewComponent} from "./document-types/document-type-preview/document-type-preview.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -52,7 +56,11 @@ const routes: Routes = [
   {path: 'orders', component: OrdersComponent},
   {path: 'orders/add', component: OrderAddComponent},
   {path: 'orders/edit/:id', component: OrderEditComponent},
-  {path: 'orders/preview/:id', component: OrderPreviewComponent}
+  {path: 'orders/preview/:id', component: OrderPreviewComponent},
+  {path: 'documentTypes', component: DocumentTypesComponent},
+  {path: 'documentTypes/add', component: DocumentTypeAddComponent},
+  {path: 'documentTypes/edit/:id', component: DocumentTypeEditComponent},
+  {path: 'documentTypes/preview/:id', component: DocumentTypePreviewComponent}
 ];
 
 @NgModule({

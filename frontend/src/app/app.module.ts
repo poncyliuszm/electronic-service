@@ -39,6 +39,11 @@ import {OrderEditComponent} from "./orders/order-edit/order-edit.component";
 import {OrderAddComponent} from "./orders/order-add/order-add.component";
 import {OrderDeleteModal, OrdersComponent} from "./orders/orders.component";
 import {OrderService} from "./services/order.service";
+import {DocumentTypePreviewComponent} from "./document-types/document-type-preview/document-type-preview.component";
+import {DocumentTypeEditComponent} from "./document-types/document-type-edit/document-type-edit.component";
+import {DocumentTypeAddComponent} from "./document-types/document-type-add/document-type-add.component";
+import {DocumentTypeDeleteModal, DocumentTypesComponent} from "./document-types/document-types.component";
+import {DocumentTypeService} from "./services/document-type.service";
 
 @NgModule({
   declarations: [
@@ -58,6 +63,7 @@ import {OrderService} from "./services/order.service";
     ProductDeleteModal,
     UserDeleteModal,
     OrderDeleteModal,
+    DocumentTypeDeleteModal,
     ProducersComponent,
     ProducerAddComponent,
     ProducerEditComponent,
@@ -73,7 +79,11 @@ import {OrderService} from "./services/order.service";
     OrdersComponent,
     OrderAddComponent,
     OrderEditComponent,
-    OrderPreviewComponent
+    OrderPreviewComponent,
+    DocumentTypesComponent,
+    DocumentTypeAddComponent,
+    DocumentTypeEditComponent,
+    DocumentTypePreviewComponent
   ],
   entryComponents: [
     ClientDeleteModal,
@@ -81,7 +91,8 @@ import {OrderService} from "./services/order.service";
     ProducerDeleteModal,
     ProductDeleteModal,
     UserDeleteModal,
-    OrderDeleteModal
+    OrderDeleteModal,
+    DocumentTypeDeleteModal
   ],
   imports: [
     BrowserModule,
@@ -103,6 +114,7 @@ import {OrderService} from "./services/order.service";
     ProductService,
     UserService,
     OrderService,
+    DocumentTypeService,
     {provide: NgbDateAdapter, useClass: NgbDateNativeAdapter}
   ],
   bootstrap: [AppComponent]
