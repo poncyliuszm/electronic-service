@@ -1,0 +1,98 @@
+<div class="jumbotron" style="padding: 2rem 1rem !important;">
+  <h1 style="margin-left: 140px;">
+    <i class="fa fa-chevron-circle-left" routerLink="/documents" style="margin-right: 40px; cursor: pointer"></i>
+    Dodaj dokument
+  </h1>
+</div>
+
+<div class="container">
+  <form #formBasic="ngForm" style="margin-top: 25px;">
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label" for="order">Zlecenie:</label>
+      <select #order="ngModel" [(ngModel)]="document.orderId"
+              [ngClass]="{'is-invalid': formBasic.submitted && order.invalid }" class="col-6 form-control"
+              id="order"
+              name="order" required>
+        <option *ngFor="let order of orders" [value]="order.id">{{order.client.name}} {{order.client.surname}}
+          - {{order.product.type}} {{order.product.version}}</option>
+      </select>
+      <div *ngIf="formBasic.submitted && order.invalid" class="invalid-feedback d-block">
+        <div *ngIf="order.errors.required" class="col-2">Zlecenie jest wymagane</div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label" for="acceptanceDate">Data wystawienia:</label>
+      <input #acceptanceDate="ngModel" #d1="ngbDatepicker" [(ngModel)]="document.date"
+             [ngClass]="{'is-invalid': formBasic.submitted && acceptanceDate.invalid }" class="col-6 form-control"
+             id="acceptanceDate"
+             name="acceptanceDate" ngbDatepicker placeholder="yyyy-mm-dd" required>
+      <button (click)="d1.toggle()" class="btn btn-outline-secondary fa fa-calendar" type="button"></button>
+      <div *ngIf="formBasic.submitted && acceptanceDate.invalid" class="invalid-feedback d-block">
+        <div *ngIf="acceptanceDate.errors.required" class="col-2">Data wystawienia jest wymagana</div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label" for="price">Cena netto:</label>
+      <input #price="ngModel" [(ngModel)]="document.netto"
+             [ngClass]="{'is-invalid': formBasic.submitted && price.invalid }"
+             class="col-6 form-control"
+             id="price" name="price" placeholder="Wprowadź cenę netto" required
+             type="number">
+      <div *ngIf="formBasic.submitted && price.invalid" class="invalid-feedback d-block">
+        <div *ngIf="price.errors.required" class="col-2">Cena netto jest wymagana</div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label" for="vat">Wartość VAT:</label>
+      <input #vat="ngModel" [(ngModel)]="document.vat"
+             [ngClass]="{'is-invalid': formBasic.submitted && vat.invalid }"
+             class="col-6 form-control"
+             id="vat" name="vat" placeholder="Wprowadź wartość VAT" required
+             type="number">
+      <div *ngIf="formBasic.submitted && vat.invalid" class="invalid-feedback d-block">
+        <div *ngIf="vat.errors.required" class="col-2">Wartość VAT jest wymagana</div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label" for="paymentType">Forma płatności:</label>
+      <select #paymentType="ngModel" [(ngModel)]="document.paymentTypeId"
+              [ngClass]="{'is-invalid': formBasic.submitted && paymentType.invalid }" class="col-6 form-control"
+              id="paymentType"
+              name="paymentType" required>
+        <option *ngFor="let paymentType of paymentTypes" [value]="paymentType.id">{{paymentType.name}}</option>
+      </select>
+      <div *ngIf="formBasic.submitted && paymentType.invalid" class="invalid-feedback d-block">
+        <div *ngIf="paymentType.errors.required" class="col-2">Forma płatności jest wymagana</div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label" for="documentType">Rodzaj dokumentu:</label>
+      <select #documentType="ngModel" [(ngModel)]="document.documentTypeId"
+              [ngClass]="{'is-invalid': formBasic.submitted && documentType.invalid }" class="col-6 form-control"
+              id="documentType"
+              name="documentType" required>
+        <option *ngFor="let documentType of documentTypes" [value]="documentType.id">{{documentType.type}}</option>
+      </select>
+      <div *ngIf="formBasic.submitted && documentType.invalid" class="invalid-feedback d-block">
+        <div *ngIf="documentType.errors.required" class="col-2">Rodzaj dokumentu jest wymagany</div>
+      </div>
+    </div>
+
+
+    <div class="form-group row" style="margin-top: 40px;">
+      <label class="col-7 col-form-label"></label>
+      <button (click)="addDocument(formBasic)" class="btn btn-success float-right col-1 form-control" type="submit">
+        Dodaj
+      </button>
+    </div>
+
+  </form>
+
+
+</div>

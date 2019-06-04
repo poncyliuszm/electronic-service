@@ -49,6 +49,11 @@ import {PaymentTypeEditComponent} from "./payment-types/payment-type-edit/paymen
 import {PaymentTypeAddComponent} from "./payment-types/payment-type-add/payment-type-add.component";
 import {PaymentTypeDeleteModal, PaymentTypesComponent} from "./payment-types/payment-types.component";
 import {PaymentTypeService} from "./services/payment-type.service";
+import {DocumentAddComponent} from "./documents/document-add/document-add.component";
+import {DocumentPreviewComponent} from "./documents/document-preview/document-preview.component";
+import {DocumentEditComponent} from "./documents/document-edit/document-edit.component";
+import {DocumentDeleteModal, DocumentsComponent} from "./documents/documents.component";
+import {DocumentService} from "./services/document.service";
 
 @NgModule({
   declarations: [
@@ -70,6 +75,7 @@ import {PaymentTypeService} from "./services/payment-type.service";
     OrderDeleteModal,
     DocumentTypeDeleteModal,
     PaymentTypeDeleteModal,
+    DocumentDeleteModal,
     ProducersComponent,
     ProducerAddComponent,
     ProducerEditComponent,
@@ -93,7 +99,11 @@ import {PaymentTypeService} from "./services/payment-type.service";
     PaymentTypesComponent,
     PaymentTypeAddComponent,
     PaymentTypeEditComponent,
-    PaymentTypePreviewComponent
+    PaymentTypePreviewComponent,
+    DocumentsComponent,
+    DocumentAddComponent,
+    DocumentEditComponent,
+    DocumentPreviewComponent
   ],
   entryComponents: [
     ClientDeleteModal,
@@ -103,7 +113,8 @@ import {PaymentTypeService} from "./services/payment-type.service";
     UserDeleteModal,
     OrderDeleteModal,
     DocumentTypeDeleteModal,
-    PaymentTypeDeleteModal
+    PaymentTypeDeleteModal,
+    DocumentDeleteModal
   ],
   imports: [
     BrowserModule,
@@ -127,6 +138,7 @@ import {PaymentTypeService} from "./services/payment-type.service";
     OrderService,
     DocumentTypeService,
     PaymentTypeService,
+    DocumentService,
     {provide: NgbDateAdapter, useClass: NgbDateNativeAdapter}
   ],
   bootstrap: [AppComponent]
