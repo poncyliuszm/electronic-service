@@ -59,6 +59,11 @@ import {ServiceStatusPreviewComponent} from "./service-statuses/service-status-p
 import {ServiceStatusEditComponent} from "./service-statuses/service-status-edit/service-status-edit.component";
 import {ServiceStatusDeleteModal, ServiceStatusesComponent} from "./service-statuses/service-statuses.component";
 import {ServiceStatusService} from "./services/service-status.service";
+import {OperationDeleteModal, OperationsComponent} from "./operations/operations.component";
+import {OperationPreviewComponent} from "./operations/operation-preview/operation-preview.component";
+import {OperationEditComponent} from "./operations/operation-edit/operation-edit.component";
+import {OperationAddComponent} from "./operations/operation-add/operation-add.component";
+import {OperationService} from "./services/operation.service";
 
 @NgModule({
   declarations: [
@@ -82,6 +87,7 @@ import {ServiceStatusService} from "./services/service-status.service";
     PaymentTypeDeleteModal,
     DocumentDeleteModal,
     ServiceStatusDeleteModal,
+    OperationDeleteModal,
     ProducersComponent,
     ProducerAddComponent,
     ProducerEditComponent,
@@ -113,7 +119,11 @@ import {ServiceStatusService} from "./services/service-status.service";
     ServiceStatusesComponent,
     ServiceStatusAddComponent,
     ServiceStatusEditComponent,
-    ServiceStatusPreviewComponent
+    ServiceStatusPreviewComponent,
+    OperationsComponent,
+    OperationAddComponent,
+    OperationEditComponent,
+    OperationPreviewComponent
   ],
   entryComponents: [
     ClientDeleteModal,
@@ -125,7 +135,8 @@ import {ServiceStatusService} from "./services/service-status.service";
     DocumentTypeDeleteModal,
     PaymentTypeDeleteModal,
     DocumentDeleteModal,
-    ServiceStatusDeleteModal
+    ServiceStatusDeleteModal,
+    OperationDeleteModal
   ],
   imports: [
     BrowserModule,
@@ -151,6 +162,7 @@ import {ServiceStatusService} from "./services/service-status.service";
     PaymentTypeService,
     DocumentService,
     ServiceStatusService,
+    OperationService,
     {provide: NgbDateAdapter, useClass: NgbDateNativeAdapter}
   ],
   bootstrap: [AppComponent]

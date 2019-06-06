@@ -41,6 +41,10 @@ import {ServiceStatusesComponent} from "./service-statuses/service-statuses.comp
 import {ServiceStatusAddComponent} from "./service-statuses/service-status-add/service-status-add.component";
 import {ServiceStatusEditComponent} from "./service-statuses/service-status-edit/service-status-edit.component";
 import {ServiceStatusPreviewComponent} from "./service-statuses/service-status-preview/service-status-preview.component";
+import {OperationsComponent} from "./operations/operations.component";
+import {OperationAddComponent} from "./operations/operation-add/operation-add.component";
+import {OperationEditComponent} from "./operations/operation-edit/operation-edit.component";
+import {OperationPreviewComponent} from "./operations/operation-preview/operation-preview.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -84,7 +88,11 @@ const routes: Routes = [
   {path: 'serviceStatuses', component: ServiceStatusesComponent},
   {path: 'serviceStatuses/add', component: ServiceStatusAddComponent},
   {path: 'serviceStatuses/edit/:id', component: ServiceStatusEditComponent},
-  {path: 'serviceStatuses/preview/:id', component: ServiceStatusPreviewComponent}
+  {path: 'serviceStatuses/preview/:id', component: ServiceStatusPreviewComponent},
+  {path: 'operations', component: OperationsComponent},
+  {path: 'operations/add', component: OperationAddComponent},
+  {path: 'operations/edit/:id', component: OperationEditComponent},
+  {path: 'operations/preview/:id', component: OperationPreviewComponent}
 ];
 
 @NgModule({
