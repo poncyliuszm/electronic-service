@@ -54,6 +54,11 @@ import {DocumentPreviewComponent} from "./documents/document-preview/document-pr
 import {DocumentEditComponent} from "./documents/document-edit/document-edit.component";
 import {DocumentDeleteModal, DocumentsComponent} from "./documents/documents.component";
 import {DocumentService} from "./services/document.service";
+import {ServiceStatusAddComponent} from "./service-statuses/service-status-add/service-status-add.component";
+import {ServiceStatusPreviewComponent} from "./service-statuses/service-status-preview/service-status-preview.component";
+import {ServiceStatusEditComponent} from "./service-statuses/service-status-edit/service-status-edit.component";
+import {ServiceStatusDeleteModal, ServiceStatusesComponent} from "./service-statuses/service-statuses.component";
+import {ServiceStatusService} from "./services/service-status.service";
 
 @NgModule({
   declarations: [
@@ -76,6 +81,7 @@ import {DocumentService} from "./services/document.service";
     DocumentTypeDeleteModal,
     PaymentTypeDeleteModal,
     DocumentDeleteModal,
+    ServiceStatusDeleteModal,
     ProducersComponent,
     ProducerAddComponent,
     ProducerEditComponent,
@@ -103,7 +109,11 @@ import {DocumentService} from "./services/document.service";
     DocumentsComponent,
     DocumentAddComponent,
     DocumentEditComponent,
-    DocumentPreviewComponent
+    DocumentPreviewComponent,
+    ServiceStatusesComponent,
+    ServiceStatusAddComponent,
+    ServiceStatusEditComponent,
+    ServiceStatusPreviewComponent
   ],
   entryComponents: [
     ClientDeleteModal,
@@ -114,7 +124,8 @@ import {DocumentService} from "./services/document.service";
     OrderDeleteModal,
     DocumentTypeDeleteModal,
     PaymentTypeDeleteModal,
-    DocumentDeleteModal
+    DocumentDeleteModal,
+    ServiceStatusDeleteModal
   ],
   imports: [
     BrowserModule,
@@ -139,6 +150,7 @@ import {DocumentService} from "./services/document.service";
     DocumentTypeService,
     PaymentTypeService,
     DocumentService,
+    ServiceStatusService,
     {provide: NgbDateAdapter, useClass: NgbDateNativeAdapter}
   ],
   bootstrap: [AppComponent]

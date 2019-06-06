@@ -37,6 +37,10 @@ import {DocumentsComponent} from "./documents/documents.component";
 import {DocumentAddComponent} from "./documents/document-add/document-add.component";
 import {DocumentEditComponent} from "./documents/document-edit/document-edit.component";
 import {DocumentPreviewComponent} from "./documents/document-preview/document-preview.component";
+import {ServiceStatusesComponent} from "./service-statuses/service-statuses.component";
+import {ServiceStatusAddComponent} from "./service-statuses/service-status-add/service-status-add.component";
+import {ServiceStatusEditComponent} from "./service-statuses/service-status-edit/service-status-edit.component";
+import {ServiceStatusPreviewComponent} from "./service-statuses/service-status-preview/service-status-preview.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -76,7 +80,11 @@ const routes: Routes = [
   {path: 'documents', component: DocumentsComponent},
   {path: 'documents/add', component: DocumentAddComponent},
   {path: 'documents/edit/:id', component: DocumentEditComponent},
-  {path: 'documents/preview/:id', component: DocumentPreviewComponent}
+  {path: 'documents/preview/:id', component: DocumentPreviewComponent},
+  {path: 'serviceStatuses', component: ServiceStatusesComponent},
+  {path: 'serviceStatuses/add', component: ServiceStatusAddComponent},
+  {path: 'serviceStatuses/edit/:id', component: ServiceStatusEditComponent},
+  {path: 'serviceStatuses/preview/:id', component: ServiceStatusPreviewComponent}
 ];
 
 @NgModule({

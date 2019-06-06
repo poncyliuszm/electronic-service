@@ -1,0 +1,35 @@
+<div class="jumbotron" style="padding: 2rem 1rem !important;">
+  <h1 style="margin-left: 140px;">Statusy serwisu</h1>
+</div>
+
+<div class="container" style="margin-top: 40px;">
+
+  <button class="btn btn-info float-right" routerLink="/serviceStatuses/add"
+          style="margin-bottom: 20px; margin-right: 75px;" type="button">
+    Dodaj status serwisu
+  </button>
+
+  <table class="table table-hover" style="margin-top: 10px;">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>Status</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let serviceStatus of serviceStatuses">
+      <td>{{serviceStatus.position}}</td>
+      <td>{{serviceStatus.status}}</td>
+      <td>
+        <button (click)="previewServiceStatus(serviceStatus)" class="btn btn-primary" type="button">Szczegóły</button>
+        <button (click)="editServiceStatus(serviceStatus)" class="btn btn-warning" style="margin-left:5px;"
+                type="button">
+          Edytuj
+        </button>
+        <button (click)="open(serviceStatus)" class="btn btn-danger" style="margin-left:5px;" type="button">Usuń
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,30 @@
+<div class="jumbotron" style="padding: 2rem 1rem !important;">
+  <h1 style="margin-left: 140px;">
+    <i class="fa fa-chevron-circle-left" routerLink="/serviceStatuses" style="margin-right: 40px; cursor: pointer"></i>
+    Edytuj status serwisu
+  </h1>
+</div>
+
+<div class="container">
+  <form #formBasic="ngForm" style="margin-top: 25px;">
+    <div class="form-group row">
+      <label class="col-2 col-form-label" for="status">Status serwisu:</label>
+      <input #status="ngModel" [(ngModel)]="serviceStatus.status"
+             [ngClass]="{'is-invalid': formBasic.submitted && status.invalid }" class="col-6 form-control" id="status"
+             name="status" placeholder="Wprowadź formę płatności" required type="text">
+      <div *ngIf="formBasic.submitted && status.invalid" class="invalid-feedback d-block">
+        <div *ngIf="status.errors.required" class="col-2">Status jest wymagany</div>
+      </div>
+    </div>
+
+
+    <div class="form-group row" style="margin-top: 40px;">
+      <label class="col-7 col-form-label"></label>
+      <button (click)="save(formBasic)" class="btn btn-success float-right col-1 form-control" type="submit">Zapisz
+      </button>
+    </div>
+
+  </form>
+
+
+</div>
