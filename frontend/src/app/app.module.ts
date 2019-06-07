@@ -64,6 +64,11 @@ import {OperationPreviewComponent} from "./operations/operation-preview/operatio
 import {OperationEditComponent} from "./operations/operation-edit/operation-edit.component";
 import {OperationAddComponent} from "./operations/operation-add/operation-add.component";
 import {OperationService} from "./services/operation.service";
+import {PartEditComponent} from "./parts/part-edit/part-edit.component";
+import {PartPreviewComponent} from "./parts/part-preview/part-preview.component";
+import {PartAddComponent} from "./parts/part-add/part-add.component";
+import {PartDeleteModal, PartsComponent} from "./parts/parts.component";
+import {PartService} from "./services/part.service";
 
 @NgModule({
   declarations: [
@@ -88,6 +93,7 @@ import {OperationService} from "./services/operation.service";
     DocumentDeleteModal,
     ServiceStatusDeleteModal,
     OperationDeleteModal,
+    PartDeleteModal,
     ProducersComponent,
     ProducerAddComponent,
     ProducerEditComponent,
@@ -123,7 +129,11 @@ import {OperationService} from "./services/operation.service";
     OperationsComponent,
     OperationAddComponent,
     OperationEditComponent,
-    OperationPreviewComponent
+    OperationPreviewComponent,
+    PartsComponent,
+    PartAddComponent,
+    PartEditComponent,
+    PartPreviewComponent
   ],
   entryComponents: [
     ClientDeleteModal,
@@ -136,7 +146,8 @@ import {OperationService} from "./services/operation.service";
     PaymentTypeDeleteModal,
     DocumentDeleteModal,
     ServiceStatusDeleteModal,
-    OperationDeleteModal
+    OperationDeleteModal,
+    PartDeleteModal
   ],
   imports: [
     BrowserModule,
@@ -163,6 +174,7 @@ import {OperationService} from "./services/operation.service";
     DocumentService,
     ServiceStatusService,
     OperationService,
+    PartService,
     {provide: NgbDateAdapter, useClass: NgbDateNativeAdapter}
   ],
   bootstrap: [AppComponent]

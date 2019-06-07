@@ -43,7 +43,7 @@
               class="col-6 form-control" disabled
               id="product"
               name="product" required>
-        <option *ngFor="let product of products" [value]="product.id">{{product.description}}-{{product.version}}-
+        <option *ngFor="let product of products" [value]="product.id">{{product.type}}-{{product.version}}-
         </option>
       </select>
       <div *ngIf="formBasic.submitted && product.invalid" class="invalid-feedback d-block">

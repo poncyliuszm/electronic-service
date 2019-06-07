@@ -2,27 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b53c1f7e-4285-4124-b529-66776fa80833" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/mp/backend/controller/OperationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/mp/backend/model/Operation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/mp/backend/repository/OperationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/operations/operation-add/operation-add.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/operations/operation-add/operation-add.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/operations/operation-add/operation-add.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/operations/operation-edit/operation-edit.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/operations/operation-edit/operation-edit.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/operations/operation-edit/operation-edit.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/operations/operation-preview/operation-preview.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/operations/operation-preview/operation-preview.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/operations/operation-preview/operation-preview.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/operations/operations.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/operations/operations.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/operations/operations.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/services/operation.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/mp/backend/controller/PartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/mp/backend/model/Part.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/mp/backend/repository/PartRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/parts/part-add/part-add.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/parts/part-add/part-add.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/parts/part-add/part-add.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/parts/part-edit/part-edit.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/parts/part-edit/part-edit.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/parts/part-edit/part-edit.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/parts/part-preview/part-preview.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/parts/part-preview/part-preview.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/parts/part-preview/part-preview.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/parts/parts.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/parts/parts.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/parts/parts.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/services/part.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/producers/producer-add/producer-add.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/producers/producer-add/producer-add.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/operations/operations.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/operations/operations.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/orders/order-add/order-add.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/orders/order-add/order-add.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/orders/order-edit/order-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/orders/order-edit/order-edit.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/orders/order-preview/order-preview.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/orders/order-preview/order-preview.component.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/frontend/node_modules/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -79,10 +83,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/documents/document-add/document-add.component.html">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/parts/part-add/part-add.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="58" selection-end-column="10" />
+            <state relative-caret-position="170">
+              <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/services/producer.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/parts/part-add/part-add.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="33" column="10" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="33" selection-end-column="10" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -91,34 +116,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/operations/operation-add/operation-add.component.html">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/parts/part-edit/part-edit.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="41" column="10" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="41" selection-end-column="10" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/operations/operation-edit/operation-edit.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="41" column="10" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="41" selection-end-column="10" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/operations/operations.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+            <state relative-caret-position="68">
+              <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="45" selection-end-column="10" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -129,8 +130,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/app/operations/operation-preview/operation-preview.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="41" column="10" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
+            <state relative-caret-position="190">
+              <caret line="28" column="12" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -139,43 +140,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/operations/operation-preview/operation-preview.component.ts">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/parts/part-preview/part-preview.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-170">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-              <folding>
-                <element signature="e#0#48#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/operations/operation-edit/operation-edit.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="53" column="17" lean-forward="true" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#67#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/operations/operation-add/operation-add.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="38" column="48" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/documents/documents.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="25" />
+            <state relative-caret-position="309">
+              <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -184,12 +152,36 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/operations/operations.component.ts">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/parts/part-edit/part-edit.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+            <state relative-caret-position="71">
+              <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="22" selection-end-column="9" />
               <folding>
-                <element signature="e#0#55#0" expanded="true" />
+                <element signature="e#0#67#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/parts/part-preview/part-preview.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="530">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+              <folding>
+                <element signature="e#0#48#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/parts/parts.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="49" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -208,14 +200,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>order</find>
-      <find>acceptanceDate</find>
-      <find>description</find>
-      <find>price</find>
-      <find>product</find>
-      <find>productService</find>
-      <find>produ</find>
-      <find>data</find>
       <find>PaymentTypeRepository</find>
       <find>paymentTypeRepository</find>
       <find>payment-types</find>
@@ -226,7 +210,6 @@
       <find>paymentType</find>
       <find>formy płatności</find>
       <find>serviceStatues</find>
-      <find>name</find>
       <find>service</find>
       <find>ProducerRepository</find>
       <find>producerRepository</find>
@@ -237,17 +220,18 @@
       <find>cena</find>
       <find>vat</find>
       <find>document</find>
+      <find>name</find>
+      <find>Usługi</find>
+      <find>usługę</find>
       <find>operation</find>
+      <find>Operation</find>
+      <find>Produkt</find>
+      <find>operations</find>
+      <find>description</find>
+      <find>operationService</find>
+      <find>operationId</find>
     </findStrings>
     <replaceStrings>
-      <replace>PaymentTypeRepository</replace>
-      <replace>paymentTypes</replace>
-      <replace>PaymentType</replace>
-      <replace>formę płatności</replace>
-      <replace>DocumentRepository</replace>
-      <replace>documentRepository</replace>
-      <replace>document</replace>
-      <replace>Document</replace>
       <replace>order</replace>
       <replace>date</replace>
       <replace>price</replace>
@@ -270,6 +254,14 @@
       <replace>operations</replace>
       <replace>Operation</replace>
       <replace>operation</replace>
+      <replace>Części</replace>
+      <replace>część</replace>
+      <replace>part</replace>
+      <replace>Part</replace>
+      <replace>parts</replace>
+      <replace>serialNumber</replace>
+      <replace>partService</replace>
+      <replace>partId</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\soft\src\workspace_idea\electronic-service\frontend\src\app\orders</dir>
@@ -277,6 +269,7 @@
       <dir>D:\soft\src\workspace_idea\electronic-service\frontend\src\app\documents</dir>
       <dir>D:\soft\src\workspace_idea\electronic-service\frontend\src\app\service-statuses</dir>
       <dir>D:\soft\src\workspace_idea\electronic-service\frontend\src\app\operations</dir>
+      <dir>D:\soft\src\workspace_idea\electronic-service\frontend\src\app\parts</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -285,23 +278,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/frontend/src/app/services/payment-type.service.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/payment-types/payment-types.component.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/payment-types/payment-type-preview/payment-type-preview.component.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/payment-types/payment-type-edit/payment-type-edit.component.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/payment-types/payment-type-add/payment-type-add.component.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/payment-types/payment-type-add/payment-type-add.component.html" />
-        <option value="$PROJECT_DIR$/frontend/src/app/payment-types/payment-type-preview/payment-type-preview.component.html" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/mp/backend/model/Document.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/mp/backend/repository/DocumentRepository.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/mp/backend/controller/DocumentController.java" />
-        <option value="$PROJECT_DIR$/frontend/src/app/documents/document-add/order-add.component.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/documents/document.component.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/services/document.service.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/orders/order-add/order-add.component.html" />
-        <option value="$PROJECT_DIR$/frontend/src/app/documents/document-edit/document-edit.component.html" />
-        <option value="$PROJECT_DIR$/frontend/src/app/documents/documents.component.html" />
-        <option value="$PROJECT_DIR$/frontend/src/app/documents/document-preview/document-preview.component.ts" />
         <option value="$PROJECT_DIR$/frontend/src/app/documents/document-preview/document-preview.component.html" />
         <option value="$PROJECT_DIR$/frontend/src/app/documents/document-edit/document-edit.component.ts" />
         <option value="$PROJECT_DIR$/frontend/src/app/documents/document-add/document-add.component.html" />
@@ -323,19 +299,36 @@
         <option value="$PROJECT_DIR$/backend/src/main/java/mp/backend/model/Operation.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/mp/backend/repository/OperationRepository.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/mp/backend/controller/OperationController.java" />
-        <option value="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/frontend/src/app/services/operation.service.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/operations/operations.component.ts" />
         <option value="$PROJECT_DIR$/frontend/src/app/producers/producer-add/producer-add.component.html" />
         <option value="$PROJECT_DIR$/frontend/src/app/operations/operation-add/operation-add.component.html" />
         <option value="$PROJECT_DIR$/frontend/src/app/operations/operation-add/operation-add.component.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/operations/operation-edit/operation-edit.component.html" />
         <option value="$PROJECT_DIR$/frontend/src/app/operations/operation-edit/operation-edit.component.ts" />
         <option value="$PROJECT_DIR$/frontend/src/app/operations/operations.component.html" />
-        <option value="$PROJECT_DIR$/frontend/src/app/operations/operation-preview/operation-preview.component.html" />
         <option value="$PROJECT_DIR$/frontend/src/app/operations/operation-preview/operation-preview.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/operations/operation-edit/operation-edit.component.html" />
+        <option value="$PROJECT_DIR$/frontend/src/app/operations/operation-preview/operation-preview.component.html" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/mp/backend/model/Items.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/mp/backend/model/Item.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/mp/backend/model/Part.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/mp/backend/repository/PartRepository.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/mp/backend/controller/PartController.java" />
+        <option value="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/services/part.service.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/operations/operations.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/parts/parts.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/frontend/src/app/orders/order-add/order-add.component.html" />
+        <option value="$PROJECT_DIR$/frontend/src/app/orders/order-preview/order-preview.component.html" />
+        <option value="$PROJECT_DIR$/frontend/src/app/orders/order-edit/order-edit.component.html" />
+        <option value="$PROJECT_DIR$/frontend/src/app/parts/parts.component.html" />
+        <option value="$PROJECT_DIR$/frontend/src/app/parts/part-add/part-add.component.html" />
+        <option value="$PROJECT_DIR$/frontend/src/app/parts/part-edit/part-edit.component.html" />
+        <option value="$PROJECT_DIR$/frontend/src/app/parts/part-add/part-add.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/parts/part-edit/part-edit.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/parts/part-preview/part-preview.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/parts/part-preview/part-preview.component.html" />
       </list>
     </option>
   </component>
@@ -354,7 +347,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -486,23 +478,6 @@
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="documents" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="electronic-service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="electronic-service" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="documents" type="462c0819:PsiDirectoryNode" />
-              <item name="document-add" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="electronic-service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="electronic-service" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="operations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -521,7 +496,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="operations" type="462c0819:PsiDirectoryNode" />
-              <item name="operation-edit" type="462c0819:PsiDirectoryNode" />
+              <item name="operation-preview" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="electronic-service" type="b2602c69:ProjectViewProjectNode" />
@@ -529,8 +504,69 @@
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="operations" type="462c0819:PsiDirectoryNode" />
-              <item name="operation-preview" type="462c0819:PsiDirectoryNode" />
+              <item name="orders" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="electronic-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="electronic-service" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="orders" type="462c0819:PsiDirectoryNode" />
+              <item name="order-add" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="electronic-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="electronic-service" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="orders" type="462c0819:PsiDirectoryNode" />
+              <item name="order-edit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="electronic-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="electronic-service" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="orders" type="462c0819:PsiDirectoryNode" />
+              <item name="order-preview" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="electronic-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="electronic-service" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="parts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="electronic-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="electronic-service" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="parts" type="462c0819:PsiDirectoryNode" />
+              <item name="part-add" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="electronic-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="electronic-service" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="parts" type="462c0819:PsiDirectoryNode" />
+              <item name="part-edit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="electronic-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="electronic-service" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="parts" type="462c0819:PsiDirectoryNode" />
+              <item name="part-preview" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="electronic-service" type="b2602c69:ProjectViewProjectNode" />
@@ -615,6 +651,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -749,7 +786,8 @@
       <workItem from="1559074245524" duration="609000" />
       <workItem from="1559399589231" duration="6896000" />
       <workItem from="1559471515137" duration="22003000" />
-      <workItem from="1559776716479" duration="5096000" />
+      <workItem from="1559776716479" duration="7747000" />
+      <workItem from="1559931418137" duration="555000" />
     </task>
     <task id="LOCAL-00001" summary="Zakladka klienci - backend + frontend.&#10;Toasty + modale.">
       <created>1557935826189</created>
@@ -821,21 +859,28 @@
       <option name="project" value="LOCAL" />
       <updated>1559845683245</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Usługi - backend + frontend">
+      <created>1559853983192</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1559853983192</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95205000" />
+    <option name="totallyTimeSpent" value="98411000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1368" y="582" width="1376" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19756839" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49872124" visible="true" weight="0.2006079" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Favorites" order="4" sideWeight="0.50127876" side_tool="true" weight="0.19756839" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info id="Image Layers" order="7" />
@@ -926,7 +971,8 @@
     <MESSAGE value="Dokumenty sprzedaży - backend + frontend" />
     <MESSAGE value="Statusy serwisu" />
     <MESSAGE value="fix walidator statusu serwisu" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix walidator statusu serwisu" />
+    <MESSAGE value="Usługi - backend + frontend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Usługi - backend + frontend" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -944,195 +990,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/mp/backend/repository/PaymentTypeRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/mp/backend/repository/ServiceStatusRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="76" selection-start-line="7" selection-start-column="76" selection-end-line="7" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/mp/backend/controller/PaymentTypeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/mp/backend/controller/ServiceStatusController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="31" />
-          <folding>
-            <element signature="e#718#719#0" expanded="true" />
-            <element signature="e#774#775#0" expanded="true" />
-            <element signature="e#1095#1096#0" expanded="true" />
-            <element signature="e#1152#1153#0" expanded="true" />
-            <element signature="e#1381#1382#0" expanded="true" />
-            <element signature="e#1435#1436#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/payment-types/payment-type-preview/payment-type-preview.component.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/service-statuses/service-status-add/service-status-add.component.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/service-statuses/service-status-edit/service-status-edit.component.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/service-statuses/service-status-preview/service-status-preview.component.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/service-statuses/service-statuses.component.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/services/payment-type.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/mp/backend/model/ServiceStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
-          <folding>
-            <element signature="e#321#322#0" expanded="true" />
-            <element signature="e#346#347#0" expanded="true" />
-            <element signature="e#383#384#0" expanded="true" />
-            <element signature="e#411#412#0" expanded="true" />
-            <element signature="e#475#476#0" expanded="true" />
-            <element signature="e#519#520#0" expanded="true" />
-            <element signature="e#555#556#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/service-statuses/service-statuses.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/service-statuses/service-status-add/service-status-add.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/service-statuses/service-status-add/service-status-add.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="20" column="58" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/service-statuses/service-status-edit/service-status-edit.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/service-statuses/service-status-edit/service-status-edit.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="44" column="34" selection-start-line="44" selection-start-column="34" selection-end-line="44" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/service-statuses/service-status-preview/service-status-preview.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/service-statuses/service-status-preview/service-status-preview.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/mp/backend/model/Producer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/mp/backend/repository/ProductRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/mp/backend/repository/ProducerRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/mp/backend/repository/OperationRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="68" selection-start-line="7" selection-start-column="68" selection-end-line="7" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/mp/backend/controller/ProducerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/mp/backend/controller/OperationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#670#671#0" expanded="true" />
-            <element signature="e#722#723#0" expanded="true" />
-            <element signature="e#877#878#0" expanded="true" />
-            <element signature="e#945#946#0" expanded="true" />
-            <element signature="e#1029#1030#0" expanded="true" />
-            <element signature="e#1080#1081#0" expanded="true" />
-            <element signature="e#1163#1164#0" expanded="true" />
-            <element signature="e#1221#1222#0" expanded="true" />
-            <element signature="e#1297#1298#0" expanded="true" />
-            <element signature="e#1347#1348#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/app/operations/operation-edit/operation-edit.component.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1149,20 +1006,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="48" column="49" selection-start-line="48" selection-start-column="49" selection-end-line="48" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/app-routing.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="91" column="14" selection-start-line="91" selection-start-column="10" selection-end-line="91" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/app/services/service-status.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1173,72 +1016,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/services/operation.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/services/producer.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/app/operations/operation-add/operation-add.component.css">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="138" column="24" selection-start-line="138" selection-start-column="24" selection-end-line="138" selection-end-column="24" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/app/producers/producer-add/producer-add.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/mp/backend/model/Operation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#476#477#0" expanded="true" />
-            <element signature="e#501#502#0" expanded="true" />
-            <element signature="e#538#539#0" expanded="true" />
-            <element signature="e#566#567#0" expanded="true" />
-            <element signature="e#597#598#0" expanded="true" />
-            <element signature="e#624#625#0" expanded="true" />
-            <element signature="e#664#665#0" expanded="true" />
-            <element signature="e#696#697#0" expanded="true" />
-            <element signature="e#732#733#0" expanded="true" />
-            <element signature="e#760#761#0" expanded="true" />
-            <element signature="e#806#807#0" expanded="true" />
-            <element signature="e#840#841#0" expanded="true" />
-            <element signature="e#871#872#0" expanded="true" />
-            <element signature="e#897#898#0" expanded="true" />
-            <element signature="e#936#937#0" expanded="true" />
-            <element signature="e#966#967#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/operations/operations.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1302,62 +1086,362 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/operations/operation-add/operation-add.component.html">
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/operations/operation-preview/operation-preview.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="41" column="10" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="41" selection-end-column="10" />
+        <state relative-caret-position="224">
+          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/operations/operation-edit/operation-edit.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/mp/backend/model/Operation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#476#477#0" expanded="true" />
+            <element signature="e#501#502#0" expanded="true" />
+            <element signature="e#538#539#0" expanded="true" />
+            <element signature="e#566#567#0" expanded="true" />
+            <element signature="e#597#598#0" expanded="true" />
+            <element signature="e#624#625#0" expanded="true" />
+            <element signature="e#664#665#0" expanded="true" />
+            <element signature="e#696#697#0" expanded="true" />
+            <element signature="e#732#733#0" expanded="true" />
+            <element signature="e#760#761#0" expanded="true" />
+            <element signature="e#806#807#0" expanded="true" />
+            <element signature="e#840#841#0" expanded="true" />
+            <element signature="e#871#872#0" expanded="true" />
+            <element signature="e#897#898#0" expanded="true" />
+            <element signature="e#936#937#0" expanded="true" />
+            <element signature="e#966#967#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/mp/backend/model/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="33" column="28" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="33" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/mp/backend/repository/OperationRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="68" selection-start-line="7" selection-start-column="68" selection-end-line="7" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/mp/backend/repository/PartRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/mp/backend/controller/OperationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#670#671#0" expanded="true" />
+            <element signature="e#722#723#0" expanded="true" />
+            <element signature="e#877#878#0" expanded="true" />
+            <element signature="e#945#946#0" expanded="true" />
+            <element signature="e#1029#1030#0" expanded="true" />
+            <element signature="e#1080#1081#0" expanded="true" />
+            <element signature="e#1163#1164#0" expanded="true" />
+            <element signature="e#1221#1222#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/mp/backend/controller/PartController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="30" selection-end-column="30" />
+          <folding>
+            <element signature="e#501#502#0" expanded="true" />
+            <element signature="e#553#554#0" expanded="true" />
+            <element signature="e#610#611#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
+            <element signature="e#807#808#0" expanded="true" />
+            <element signature="e#870#871#0" expanded="true" />
+            <element signature="e#944#945#0" expanded="true" />
+            <element signature="e#985#986#0" expanded="true" />
+            <element signature="e#1053#1054#0" expanded="true" />
+            <element signature="e#1101#1102#0" expanded="true" />
+            <element signature="e#1187#1188#0" expanded="true" />
+            <element signature="e#1232#1233#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/app/operations/operation-edit/operation-edit.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="53" column="17" lean-forward="true" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
+        <state relative-caret-position="156">
+          <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
           <folding>
             <element signature="e#0#67#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/operations/operations.component.html">
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/parts/part-add/part-add.component.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/parts/part-edit/part-edit.component.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/parts/part-preview/part-preview.component.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/services/part.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+        <state relative-caret-position="292">
+          <caret line="24" column="52" lean-forward="true" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/services/operation.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/operations/operation-add/operation-add.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="41" column="10" selection-start-line="19" selection-start-column="3" selection-end-line="41" selection-end-column="10" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/operations/operation-edit/operation-edit.component.html">
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/operations/operations.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="41" column="10" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="41" selection-end-column="10" />
+        <state relative-caret-position="37">
+          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/operations/operations.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="63" column="37" lean-forward="true" selection-start-line="63" selection-start-column="37" selection-end-line="63" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="149" column="19" selection-start-line="149" selection-start-column="19" selection-end-line="149" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/parts/parts.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="81" column="22" selection-start-line="81" selection-start-column="13" selection-end-line="81" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="36" column="44" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/parts/parts.component.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/mp/backend/model/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-238">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/orders/order-edit/order-edit.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/orders/order-preview/order-preview.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="45" column="84" selection-start-line="45" selection-start-column="84" selection-end-line="45" selection-end-column="84" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/orders/order-add/order-add.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="74" column="3" lean-forward="true" selection-start-line="69" selection-start-column="2" selection-end-line="74" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/app-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="100" column="39" lean-forward="true" selection-start-line="100" selection-start-column="39" selection-end-line="100" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/services/producer.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/parts/parts.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="49" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/mp/backend/model/Part.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#688#689#0" expanded="true" />
+            <element signature="e#725#726#0" expanded="true" />
+            <element signature="e#753#754#0" expanded="true" />
+            <element signature="e#790#791#0" expanded="true" />
+            <element signature="e#822#823#0" expanded="true" />
+            <element signature="e#873#874#0" expanded="true" />
+            <element signature="e#915#916#0" expanded="true" />
+            <element signature="e#950#951#0" expanded="true" />
+            <element signature="e#980#981#0" expanded="true" />
+            <element signature="e#1027#1028#0" expanded="true" />
+            <element signature="e#1065#1066#0" expanded="true" />
+            <element signature="e#1104#1105#0" expanded="true" />
+            <element signature="e#1139#1140#0" expanded="true" />
+            <element signature="e#1195#1196#0" expanded="true" />
+            <element signature="e#1243#1244#0" expanded="true" />
+            <element signature="e#1279#1280#0" expanded="true" />
+            <element signature="e#1307#1308#0" expanded="true" />
+            <element signature="e#1353#1354#0" expanded="true" />
+            <element signature="e#1387#1388#0" expanded="true" />
+            <element signature="e#1418#1419#0" expanded="true" />
+            <element signature="e#1444#1445#0" expanded="true" />
+            <element signature="e#1483#1484#0" expanded="true" />
+            <element signature="e#1513#1514#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/orders/order-add/order-add.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="60" column="10" lean-forward="true" selection-start-line="50" selection-start-column="4" selection-end-line="60" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/parts/part-add/part-add.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="33" column="10" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="33" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/parts/part-add/part-add.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/parts/part-edit/part-edit.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="22" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/parts/part-preview/part-preview.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/app/operations/operation-preview/operation-preview.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="41" column="10" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
+        <state relative-caret-position="190">
+          <caret line="28" column="12" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/operations/operation-preview/operation-preview.component.ts">
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/parts/part-edit/part-edit.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="68">
+          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="45" selection-end-column="10" />
           <folding>
-            <element signature="e#0#48#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/parts/part-preview/part-preview.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

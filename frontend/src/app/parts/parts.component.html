@@ -1,0 +1,38 @@
+<div class="jumbotron" style="padding: 2rem 1rem !important;">
+  <h1 style="margin-left: 140px;">Części</h1>
+</div>
+
+<div class="container" style="margin-top: 40px;">
+
+  <button class="btn btn-info float-right" routerLink="/parts/add" style="margin-bottom: 20px; margin-right: 75px;"
+          type="button">
+    Dodaj część
+  </button>
+
+  <table class="table table-hover" style="margin-top: 10px;">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>Produkt</th>
+      <th>Numer seryjny</th>
+      <th>Cena netto</th>
+      <th>Wartość VAT</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let part of parts">
+      <td>{{part.position}}</td>
+      <td>{{part.product.type}} {{part.product.version}} </td>
+      <td>{{part.serialNumber}}</td>
+      <td>{{part.netto}} zł</td>
+      <td>{{part.vat}}</td>
+      <td>
+        <button (click)="previewPart(part)" class="btn btn-primary" type="button">Szczegóły</button>
+        <button (click)="editPart(part)" class="btn btn-warning" style="margin-left:5px;" type="button">Edytuj
+        </button>
+        <button (click)="open(part)" class="btn btn-danger" style="margin-left:5px;" type="button">Usuń</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

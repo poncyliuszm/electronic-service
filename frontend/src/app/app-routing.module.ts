@@ -45,6 +45,10 @@ import {OperationsComponent} from "./operations/operations.component";
 import {OperationAddComponent} from "./operations/operation-add/operation-add.component";
 import {OperationEditComponent} from "./operations/operation-edit/operation-edit.component";
 import {OperationPreviewComponent} from "./operations/operation-preview/operation-preview.component";
+import {PartsComponent} from "./parts/parts.component";
+import {PartAddComponent} from "./parts/part-add/part-add.component";
+import {PartEditComponent} from "./parts/part-edit/part-edit.component";
+import {PartPreviewComponent} from "./parts/part-preview/part-preview.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -92,7 +96,11 @@ const routes: Routes = [
   {path: 'operations', component: OperationsComponent},
   {path: 'operations/add', component: OperationAddComponent},
   {path: 'operations/edit/:id', component: OperationEditComponent},
-  {path: 'operations/preview/:id', component: OperationPreviewComponent}
+  {path: 'operations/preview/:id', component: OperationPreviewComponent},
+  {path: 'parts', component: PartsComponent},
+  {path: 'parts/add', component: PartAddComponent},
+  {path: 'parts/edit/:id', component: PartEditComponent},
+  {path: 'parts/preview/:id', component: PartPreviewComponent}
 ];
 
 @NgModule({

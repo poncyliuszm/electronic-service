@@ -3,50 +3,50 @@ import {Router} from "@angular/router";
 import {HttpClient} from "@angular/common/http";
 import {NgbActiveModal, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {ToastrService} from "ngx-toastr";
-import {OperationService} from "../services/operation.service";
+import {PartService} from "../services/part.service";
 
 @Component({
-  selector: 'app-operations',
-  templateUrl: './operations.component.html',
-  styleUrls: ['./operations.component.css']
+  selector: 'app-parts',
+  templateUrl: './parts.component.html',
+  styleUrls: ['./parts.component.css']
 })
-export class OperationsComponent implements OnInit {
-  operations: any;
+export class PartsComponent implements OnInit {
+  parts: any;
 
   constructor(private http: HttpClient,
-              private operationService: OperationService,
+              private partService: PartService,
               private router: Router,
               private toastr: ToastrService,
               private modalService: NgbModal) {
   }
 
   ngOnInit() {
-    this.getOperations();
+    this.getParts();
   }
 
-  getOperations() {
-    this.operationService.list()
+  getParts() {
+    this.partService.list()
       .subscribe((data: any) => {
         let counter = 1;
         data.forEach(c => c['position'] = counter++);
-        this.operations = data;
+        this.parts = data;
       })
   }
 
-  previewOperation(operation) {
-    this.router.navigate(['/operations/preview', operation.id]);
+  previewPart(part) {
+    this.router.navigate(['/parts/preview', part.id]);
   }
 
-  editOperation(operation) {
-    this.router.navigate(['/operations/edit', operation.id]);
+  editPart(part) {
+    this.router.navigate(['/parts/edit', part.id]);
   }
 
-  open(operation) {
-    const modalRef = this.modalService.open(OperationDeleteModal).result.then(result => {
+  open(part) {
+    const modalRef = this.modalService.open(PartDeleteModal).result.then(result => {
       if (result === 'true') {
-        this.operationService.delete(operation.id)
+        this.partService.delete(part.id)
           .subscribe((data: any) => {
-            this.getOperations();
+            this.getParts();
             this.showDeleteToaster()
           })
       }
@@ -54,24 +54,24 @@ export class OperationsComponent implements OnInit {
   }
 
   showDeleteToaster() {
-    this.toastr.success("Pomyślnie usunięto usługę", "");
+    this.toastr.success("Pomyślnie usunięto część", "");
   }
 
 
 }
 
 @Component({
-  selector: 'operation-delete-modal',
+  selector: 'part-delete-modal',
   template: `
     <div class="modal-header">
-      <h4 class="modal-title" id="modal-title">Usunięcie usługi</h4>
+      <h4 class="modal-title" id="modal-title">Usunięcie części</h4>
       <button type="button" class="close" aria-label="Close button" aria-describedby="modal-title"
               (click)="activeModal.dismiss('Cross click')">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
     <div class="modal-body">
-      <p>Czy na pewno chcesz usunąć tą usługę?</p>
+      <p>Czy na pewno chcesz usunąć tą część?</p>
     </div>
     <div class="modal-footer">
       <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('true')">Tak</button>
@@ -79,7 +79,7 @@ export class OperationsComponent implements OnInit {
     </div>
   `
 })
-export class OperationDeleteModal {
+export class PartDeleteModal {
   @Input() name;
 
   constructor(public activeModal: NgbActiveModal) {
