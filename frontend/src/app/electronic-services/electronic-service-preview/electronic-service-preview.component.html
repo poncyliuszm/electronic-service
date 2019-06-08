@@ -1,0 +1,67 @@
+<div class="jumbotron" style="padding: 2rem 1rem !important;">
+  <h1 style="margin-left: 140px;">
+    <i class="fa fa-chevron-circle-left" routerLink="/electronicServices"
+       style="margin-right: 40px; cursor: pointer"></i>
+    Szczegóły serwisu
+  </h1>
+</div>
+
+<div class="container">
+  <form #formBasic="ngForm" style="margin-top: 25px;">
+    <div class="form-group row">
+      <label class="col-2 col-form-label" for="order">Zlecenie:</label>
+      <select #order="ngModel" [(ngModel)]="electronicService.orderId"
+              [ngClass]="{'is-invalid': formBasic.submitted && order.invalid }" class="col-6 form-control" disabled
+              id="order"
+              name="order" required>
+        <option *ngFor="let order of orders" [value]="order.id">{{order.client.name}} {{order.client.surname}}
+          - {{order.product.type}} {{order.product.version}}</option>
+      </select>
+      <div *ngIf="formBasic.submitted && order.invalid" class="invalid-feedback d-block">
+        <div *ngIf="order.errors.required" class="col-2">Zlecenie jest wymagane</div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label" for="user">Pracownik:</label>
+      <select #user="ngModel" [(ngModel)]="electronicService.userId"
+              [ngClass]="{'is-invalid': formBasic.submitted && user.invalid }" class="col-6 form-control" disabled
+              id="user"
+              name="user" required>
+        <option *ngFor="let user of users" [value]="user.id">{{user.client.name}} {{user.client.surname}}</option>
+      </select>
+      <div *ngIf="formBasic.submitted && user.invalid" class="invalid-feedback d-block">
+        <div *ngIf="user.errors.required" class="col-2">Pracownik jest wymagany</div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label" for="description">Opis naprawy</label>
+      <input #description="ngModel" [(ngModel)]="electronicService.description"
+             [ngClass]="{'is-invalid': formBasic.submitted && description.invalid }" class="col-6 form-control"
+             disabled
+             id="description" name="description" placeholder="Wprowadź opis naprawy" required
+             type="text">
+      <div *ngIf="formBasic.submitted && description.invalid" class="invalid-feedback d-block">
+        <div *ngIf="description.errors.required" class="col-2">Opis naprawy jest wymagany</div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label" for="serviceStatus">Status:</label>
+      <select #serviceStatus="ngModel" [(ngModel)]="electronicService.serviceStatusId"
+              [ngClass]="{'is-invalid': formBasic.submitted && serviceStatus.invalid }" class="col-6 form-control"
+              disabled
+              id="serviceStatus"
+              name="serviceStatus" required>
+        <option *ngFor="let serviceStatus of serviceStatuses" [value]="serviceStatus.id">{{serviceStatus.status}} >
+      </select>
+      <div *ngIf="formBasic.submitted && serviceStatus.invalid" class="invalid-feedback d-block">
+        <div *ngIf="serviceStatus.errors.required" class="col-2">Status jest wymagany</div>
+      </div>
+    </div>
+
+  </form>
+
+
+</div>

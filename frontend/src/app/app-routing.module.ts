@@ -49,6 +49,10 @@ import {PartsComponent} from "./parts/parts.component";
 import {PartAddComponent} from "./parts/part-add/part-add.component";
 import {PartEditComponent} from "./parts/part-edit/part-edit.component";
 import {PartPreviewComponent} from "./parts/part-preview/part-preview.component";
+import {ElectronicServicesComponent} from "./electronic-services/electronic-services.component";
+import {ElectronicServiceAddComponent} from "./electronic-services/electronic-service-add/electronic-service-add.component";
+import {ElectronicServiceEditComponent} from "./electronic-services/electronic-service-edit/electronic-service-edit.component";
+import {ElectronicServicePreviewComponent} from "./electronic-services/electronic-service-preview/electronic-service-preview.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -100,7 +104,11 @@ const routes: Routes = [
   {path: 'parts', component: PartsComponent},
   {path: 'parts/add', component: PartAddComponent},
   {path: 'parts/edit/:id', component: PartEditComponent},
-  {path: 'parts/preview/:id', component: PartPreviewComponent}
+  {path: 'parts/preview/:id', component: PartPreviewComponent},
+  {path: 'electronicServices', component: ElectronicServicesComponent},
+  {path: 'electronicServices/add', component: ElectronicServiceAddComponent},
+  {path: 'electronicServices/edit/:id', component: ElectronicServiceEditComponent},
+  {path: 'electronicServices/preview/:id', component: ElectronicServicePreviewComponent}
 ];
 
 @NgModule({

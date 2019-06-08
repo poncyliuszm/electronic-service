@@ -69,6 +69,14 @@ import {PartPreviewComponent} from "./parts/part-preview/part-preview.component"
 import {PartAddComponent} from "./parts/part-add/part-add.component";
 import {PartDeleteModal, PartsComponent} from "./parts/parts.component";
 import {PartService} from "./services/part.service";
+import {ElectronicServiceAddComponent} from "./electronic-services/electronic-service-add/electronic-service-add.component";
+import {ElectronicServiceEditComponent} from "./electronic-services/electronic-service-edit/electronic-service-edit.component";
+import {ElectronicServicePreviewComponent} from "./electronic-services/electronic-service-preview/electronic-service-preview.component";
+import {
+  ElectronicServiceDeleteModal,
+  ElectronicServicesComponent
+} from "./electronic-services/electronic-services.component";
+import {ElectronicServiceService} from "./services/electronicService.service";
 
 @NgModule({
   declarations: [
@@ -94,6 +102,7 @@ import {PartService} from "./services/part.service";
     ServiceStatusDeleteModal,
     OperationDeleteModal,
     PartDeleteModal,
+    ElectronicServiceDeleteModal,
     ProducersComponent,
     ProducerAddComponent,
     ProducerEditComponent,
@@ -133,7 +142,11 @@ import {PartService} from "./services/part.service";
     PartsComponent,
     PartAddComponent,
     PartEditComponent,
-    PartPreviewComponent
+    PartPreviewComponent,
+    ElectronicServicesComponent,
+    ElectronicServiceAddComponent,
+    ElectronicServiceEditComponent,
+    ElectronicServicePreviewComponent
   ],
   entryComponents: [
     ClientDeleteModal,
@@ -147,7 +160,8 @@ import {PartService} from "./services/part.service";
     DocumentDeleteModal,
     ServiceStatusDeleteModal,
     OperationDeleteModal,
-    PartDeleteModal
+    PartDeleteModal,
+    ElectronicServiceDeleteModal
   ],
   imports: [
     BrowserModule,
@@ -175,6 +189,7 @@ import {PartService} from "./services/part.service";
     ServiceStatusService,
     OperationService,
     PartService,
+    ElectronicServiceService,
     {provide: NgbDateAdapter, useClass: NgbDateNativeAdapter}
   ],
   bootstrap: [AppComponent]

@@ -1,0 +1,43 @@
+<div class="jumbotron" style="padding: 2rem 1rem !important;">
+  <h1 style="margin-left: 140px;">Serwisy</h1>
+</div>
+
+<div class="container" style="margin-top: 40px;">
+
+  <button class="btn btn-info float-right" routerLink="/electronicServices/add"
+          style="margin-bottom: 20px; margin-right: 75px;"
+          type="button">
+    Dodaj serwis
+  </button>
+
+  <table class="table table-hover" style="margin-top: 10px;">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>Zlecenie</th>
+      <th>Pracownik</th>
+      <th>Opis naprawy</th>
+      <th>Status</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let electronicService of electronicServices">
+      <td>{{electronicService.position}}</td>
+      <td style="min-width: 300px;">{{electronicService.order.client.name}} {{electronicService.order.client.surname}}
+        - {{electronicService.order.product.type}} {{electronicService.order.product.version}} </td>
+      <td>{{electronicService.user.client.name}} {{electronicService.user.client.surname}}</td>
+      <td>{{electronicService.description}}</td>
+      <td>{{electronicService.serviceStatus.status}}</td>
+      <td>
+        <button (click)="previewElectronicService(electronicService)" class="btn btn-primary" type="button">Szczegóły
+        </button>
+        <button (click)="editElectronicService(electronicService)" class="btn btn-warning" style="margin-left:5px;"
+                type="button">Edytuj
+        </button>
+        <button (click)="open(electronicService)" class="btn btn-danger" style="margin-left:5px;" type="button">Usuń
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
