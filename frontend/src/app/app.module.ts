@@ -77,6 +77,14 @@ import {
   ElectronicServicesComponent
 } from "./electronic-services/electronic-services.component";
 import {ElectronicServiceService} from "./services/electronicService.service";
+import {InformationForClientAddComponent} from "./informations-for-client/information-for-client-add/information-for-client-add.component";
+import {InformationForClientPreviewComponent} from "./informations-for-client/information-for-client-preview/information-for-client-preview.component";
+import {InformationForClientEditComponent} from "./informations-for-client/information-for-client-edit/information-for-client-edit.component";
+import {
+  InformationForClientDeleteModal,
+  InformationsForClientComponent
+} from "./informations-for-client/informations-for-client.component";
+import {InformationForClientService} from "./services/informationForClient.service";
 
 @NgModule({
   declarations: [
@@ -103,6 +111,7 @@ import {ElectronicServiceService} from "./services/electronicService.service";
     OperationDeleteModal,
     PartDeleteModal,
     ElectronicServiceDeleteModal,
+    InformationForClientDeleteModal,
     ProducersComponent,
     ProducerAddComponent,
     ProducerEditComponent,
@@ -146,7 +155,11 @@ import {ElectronicServiceService} from "./services/electronicService.service";
     ElectronicServicesComponent,
     ElectronicServiceAddComponent,
     ElectronicServiceEditComponent,
-    ElectronicServicePreviewComponent
+    ElectronicServicePreviewComponent,
+    InformationsForClientComponent,
+    InformationForClientAddComponent,
+    InformationForClientEditComponent,
+    InformationForClientPreviewComponent
   ],
   entryComponents: [
     ClientDeleteModal,
@@ -161,7 +174,8 @@ import {ElectronicServiceService} from "./services/electronicService.service";
     ServiceStatusDeleteModal,
     OperationDeleteModal,
     PartDeleteModal,
-    ElectronicServiceDeleteModal
+    ElectronicServiceDeleteModal,
+    InformationForClientDeleteModal
   ],
   imports: [
     BrowserModule,
@@ -190,6 +204,7 @@ import {ElectronicServiceService} from "./services/electronicService.service";
     OperationService,
     PartService,
     ElectronicServiceService,
+    InformationForClientService,
     {provide: NgbDateAdapter, useClass: NgbDateNativeAdapter}
   ],
   bootstrap: [AppComponent]

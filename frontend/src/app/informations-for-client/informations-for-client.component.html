@@ -1,0 +1,44 @@
+<div class="jumbotron" style="padding: 2rem 1rem !important;">
+  <h1 style="margin-left: 140px;">Informacje dla klienta</h1>
+</div>
+
+<div class="container" style="margin-top: 40px;">
+
+  <button class="btn btn-info float-right" routerLink="/informationsForClient/add"
+          style="margin-bottom: 20px; margin-right: 75px;"
+          type="button">
+    Dodaj informjację dla klienta
+  </button>
+
+  <table class="table table-hover" style="margin-top: 10px;">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>Zlecenie</th>
+      <th>Pracownik</th>
+      <th>Informacja</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let informationForClient of informationsForClient">
+      <td>{{informationForClient.position}}</td>
+      <td
+        style="min-width: 300px;">{{informationForClient.order.client.name}} {{informationForClient.order.client.surname}}
+        - {{informationForClient.order.product.type}} {{informationForClient.order.product.version}} </td>
+      <td>{{informationForClient.user.client.name}} {{informationForClient.user.client.surname}}</td>
+      <td>{{informationForClient.information}}</td>
+      <td>
+        <button (click)="previewInformationForClient(informationForClient)" class="btn btn-primary" type="button">
+          Szczegóły
+        </button>
+        <button (click)="editInformationForClient(informationForClient)" class="btn btn-warning"
+                style="margin-left:5px;" type="button">Edytuj
+        </button>
+        <button (click)="open(informationForClient)" class="btn btn-danger" style="margin-left:5px;" type="button">
+          Usuń
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

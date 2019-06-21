@@ -53,6 +53,10 @@ import {ElectronicServicesComponent} from "./electronic-services/electronic-serv
 import {ElectronicServiceAddComponent} from "./electronic-services/electronic-service-add/electronic-service-add.component";
 import {ElectronicServiceEditComponent} from "./electronic-services/electronic-service-edit/electronic-service-edit.component";
 import {ElectronicServicePreviewComponent} from "./electronic-services/electronic-service-preview/electronic-service-preview.component";
+import {InformationForClientAddComponent} from "./informations-for-client/information-for-client-add/information-for-client-add.component";
+import {InformationForClientEditComponent} from "./informations-for-client/information-for-client-edit/information-for-client-edit.component";
+import {InformationForClientPreviewComponent} from "./informations-for-client/information-for-client-preview/information-for-client-preview.component";
+import {InformationsForClientComponent} from "./informations-for-client/informations-for-client.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -108,7 +112,11 @@ const routes: Routes = [
   {path: 'electronicServices', component: ElectronicServicesComponent},
   {path: 'electronicServices/add', component: ElectronicServiceAddComponent},
   {path: 'electronicServices/edit/:id', component: ElectronicServiceEditComponent},
-  {path: 'electronicServices/preview/:id', component: ElectronicServicePreviewComponent}
+  {path: 'electronicServices/preview/:id', component: ElectronicServicePreviewComponent},
+  {path: 'informationsForClient', component: InformationsForClientComponent},
+  {path: 'informationsForClient/add', component: InformationForClientAddComponent},
+  {path: 'informationsForClient/edit/:id', component: InformationForClientEditComponent},
+  {path: 'informationsForClient/preview/:id', component: InformationForClientPreviewComponent}
 ];
 
 @NgModule({
