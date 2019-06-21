@@ -24,7 +24,7 @@ export class ClientEditComponent implements OnInit {
     phone2: "",
     fax: "",
     email: "",
-    www: ""
+    site: ""
   };
 
   clientId;

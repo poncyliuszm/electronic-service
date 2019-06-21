@@ -23,7 +23,7 @@ export class ClientPreviewComponent implements OnInit {
     phone2: "",
     fax: "",
     email: "",
-    www: ""
+    site: ""
   };
 
   clientId;

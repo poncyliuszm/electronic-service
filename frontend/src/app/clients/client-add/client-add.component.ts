@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {ToastrService} from "ngx-toastr";
 import {ClientService} from "../../services/client.service";
@@ -24,7 +24,7 @@ export class ClientAddComponent implements OnInit {
     phone2: "",
     fax: "",
     email: "",
-    www: ""
+    site: ""
   };
 
   constructor(private clientService: ClientService,
