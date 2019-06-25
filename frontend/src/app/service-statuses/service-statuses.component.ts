@@ -4,6 +4,7 @@ import {HttpClient} from "@angular/common/http";
 import {NgbActiveModal, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {ToastrService} from "ngx-toastr";
 import {ServiceStatusService} from "../services/service-status.service";
+import {AuthService} from "../services/auth.service";
 
 @Component({
   selector: 'app-service-statues',
@@ -17,6 +18,7 @@ export class ServiceStatusesComponent implements OnInit {
               private serviceStatusService: ServiceStatusService,
               private router: Router,
               private toastr: ToastrService,
+              public authService: AuthService,
               private modalService: NgbModal) {
   }
 

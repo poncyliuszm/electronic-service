@@ -27,6 +27,19 @@
     </div>
 
     <div class="form-group row">
+      <label class="col-2 col-form-label" for="role">Funkcja:</label>
+      <select #role="ngModel" [(ngModel)]="user.role"
+              [ngClass]="{'is-invalid': formBasic.submitted && role.invalid }" class="col-6 form-control"
+              id="role"
+              name="client" required>
+        <option *ngFor="let role of roles" [value]="role">{{role}}</option>
+      </select>
+      <div *ngIf="formBasic.submitted && role.invalid" class="invalid-feedback d-block">
+        <div *ngIf="role.errors.required" class="col-2">Rola jest wymagana</div>
+      </div>
+    </div>
+
+    <div class="form-group row">
       <label class="col-2 col-form-label" for="name">Imię:</label>
       <input #name="ngModel" [(ngModel)]="user.client.name"
              [ngClass]="{'is-invalid': formBasic.submitted && name.invalid }" class="col-6 form-control" id="name"

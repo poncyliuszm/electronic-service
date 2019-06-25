@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card card-signin my-5">
+        <div class="card-body">
+          <form #f="ngForm" name="form" novalidate>
+            <p class="h4 mb-4 text-center">Logowanie</p>
+            <input [(ngModel)]="model.username" autofocus class="form-control" id="username" name="username"
+                   placeholder="Login" required type="text">
+            <input [(ngModel)]="model.password" autofocus class="form-control" id="password" name="password"
+                   placeholder="Hasło"
+                   required style="margin-top: 10px;"
+                   type="password">
+            <input (click)="login()" class="btn btn-primary"
+                   style="margin: 20px auto 0; justify-content: center; display: flex"
+                   type="submit" value="Zaloguj">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

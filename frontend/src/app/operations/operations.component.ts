@@ -4,6 +4,7 @@ import {HttpClient} from "@angular/common/http";
 import {NgbActiveModal, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {ToastrService} from "ngx-toastr";
 import {OperationService} from "../services/operation.service";
+import {AuthService} from "../services/auth.service";
 
 @Component({
   selector: 'app-operations',
@@ -16,6 +17,7 @@ export class OperationsComponent implements OnInit {
   constructor(private http: HttpClient,
               private operationService: OperationService,
               private router: Router,
+              public authService: AuthService,
               private toastr: ToastrService,
               private modalService: NgbModal) {
   }

@@ -4,7 +4,8 @@
 
 <div class="container" style="margin-top: 40px;">
 
-  <button class="btn btn-info float-right" routerLink="/electronicServices/add"
+  <button *ngIf="authService.currentUser?.role == 'ADMINISTRATOR' || authService.currentUser?.role == 'SERWISANT'"
+          class="btn btn-info float-right" routerLink="/electronicServices/add"
           style="margin-bottom: 20px; margin-right: 75px;"
           type="button">
     Dodaj serwis
@@ -31,10 +32,14 @@
       <td>
         <button (click)="previewElectronicService(electronicService)" class="btn btn-primary" type="button">Szczegóły
         </button>
-        <button (click)="editElectronicService(electronicService)" class="btn btn-warning" style="margin-left:5px;"
+        <button (click)="editElectronicService(electronicService)"
+                *ngIf="authService.currentUser?.role == 'ADMINISTRATOR' || authService.currentUser?.role == 'SERWISANT'"
+                class="btn btn-warning" style="margin-left:5px;"
                 type="button">Edytuj
         </button>
-        <button (click)="open(electronicService)" class="btn btn-danger" style="margin-left:5px;" type="button">Usuń
+        <button (click)="open(electronicService)"
+                *ngIf="authService.currentUser?.role == 'ADMINISTRATOR'" class="btn btn-danger" style="margin-left:5px;"
+                type="button">Usuń
         </button>
       </td>
     </tr>

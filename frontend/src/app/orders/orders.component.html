@@ -34,7 +34,10 @@
         <button (click)="previewOrder(order)" class="btn btn-primary" type="button">Szczegóły</button>
         <button (click)="editOrder(order)" class="btn btn-warning" style="margin-left:5px;" type="button">Edytuj
         </button>
-        <button (click)="open(order)" class="btn btn-danger" style="margin-left:5px;" type="button">Usuń</button>
+        <button (click)="open(order)"
+                *ngIf="authService.currentUser?.role == 'ADMINISTRATOR'" class="btn btn-danger" style="margin-left:5px;"
+                type="button">Usuń
+        </button>
       </td>
     </tr>
     </tbody>

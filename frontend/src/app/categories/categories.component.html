@@ -4,7 +4,9 @@
 
 <div class="container" style="margin-top: 40px;">
 
-  <button type="button" class="btn btn-info float-right" style="margin-bottom: 20px; margin-right: 75px;" routerLink="/categories/add">
+  <button *ngIf="authService.currentUser?.role == 'ADMINISTRATOR' || authService.currentUser?.role == 'SERWISANT'"
+          class="btn btn-info float-right" routerLink="/categories/add" style="margin-bottom: 20px; margin-right: 75px;"
+          type="button">
     Dodaj kategorię produktu
   </button>
 
@@ -21,8 +23,14 @@
       <td>{{category.name}}</td>
       <td>
         <button type="button" class="btn btn-primary" (click)="previewCategory(category)">Szczegóły</button>
-        <button type="button" class="btn btn-warning" style="margin-left:5px;" (click)="editCategory(category)">Edytuj</button>
-        <button type="button" class="btn btn-danger" (click)="open(category)" style="margin-left:5px;">Usuń</button>
+        <button (click)="editCategory(category)"
+                *ngIf="authService.currentUser?.role == 'ADMINISTRATOR'" class="btn btn-warning"
+                style="margin-left:5px;" type="button">Edytuj
+        </button>
+        <button (click)="open(category)"
+                *ngIf="authService.currentUser?.role == 'ADMINISTRATOR'" class="btn btn-danger" style="margin-left:5px;"
+                type="button">Usuń
+        </button>
       </td>
     </tr>
     </tbody>

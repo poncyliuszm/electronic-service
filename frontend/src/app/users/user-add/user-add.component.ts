@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {ToastrService} from "ngx-toastr";
 import {UserService} from "../../services/user.service";
+import {RoleService} from "../../services/role.service";
 
 @Component({
   selector: 'app-user-add',
@@ -9,6 +10,8 @@ import {UserService} from "../../services/user.service";
   styleUrls: ['./user-add.component.css']
 })
 export class UserAddComponent implements OnInit {
+
+  roles;
 
   client = {
     name: "",
@@ -30,16 +33,18 @@ export class UserAddComponent implements OnInit {
   user = {
     login: "",
     password: "",
+    role: "",
     client: this.client
   };
 
   constructor(private userService: UserService,
               private router: Router,
+              private roleService: RoleService,
               private toastr: ToastrService) {
   }
 
   ngOnInit() {
-
+    this.getRoles();
   }
 
   addUser(form) {
@@ -56,4 +61,10 @@ export class UserAddComponent implements OnInit {
     this.toastr.success("Pomyślnie dodano pracownika", "");
   }
 
+  private getRoles() {
+    this.roleService.list()
+      .subscribe((roles: any) => {
+        this.roles = roles;
+      })
+  }
 }

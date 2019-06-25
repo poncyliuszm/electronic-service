@@ -4,6 +4,7 @@ import {HttpClient} from "@angular/common/http";
 import {NgbActiveModal, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {ToastrService} from "ngx-toastr";
 import {ElectronicServiceService} from "../services/electronicService.service";
+import {AuthService} from "../services/auth.service";
 
 @Component({
   selector: 'app-electronic-services',
@@ -15,6 +16,7 @@ export class ElectronicServicesComponent implements OnInit {
 
   constructor(private http: HttpClient,
               private electronicServiceService: ElectronicServiceService,
+              public authService: AuthService,
               private router: Router,
               private toastr: ToastrService,
               private modalService: NgbModal) {

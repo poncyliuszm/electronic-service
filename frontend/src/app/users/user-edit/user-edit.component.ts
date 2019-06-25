@@ -3,6 +3,7 @@ import {ClientService} from "../../services/client.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {ToastrService} from "ngx-toastr";
 import {UserService} from "../../services/user.service";
+import {RoleService} from "../../services/role.service";
 
 @Component({
   selector: 'app-client-edit',
@@ -10,6 +11,8 @@ import {UserService} from "../../services/user.service";
   styleUrls: ['./user-edit.component.css']
 })
 export class UserEditComponent implements OnInit {
+
+  roles;
 
   client = {
     name: "",
@@ -31,6 +34,7 @@ export class UserEditComponent implements OnInit {
   user = {
     login: "",
     password: "",
+    role: "",
     client: this.client
   };
 
@@ -38,6 +42,7 @@ export class UserEditComponent implements OnInit {
 
   constructor(private clientService: ClientService,
               private userService: UserService,
+              private roleService: RoleService,
               private router: Router,
               private activatedRoute: ActivatedRoute,
               private toastr: ToastrService,
@@ -48,6 +53,7 @@ export class UserEditComponent implements OnInit {
   ngOnInit() {
     this.changeDetectorRef.detectChanges(); //add this because conent is not updating in custom notification
     this.getUser();
+    this.getRoles();
   }
 
   getUser() {
@@ -72,6 +78,13 @@ export class UserEditComponent implements OnInit {
 
   showToaster() {
     this.toastr.success("Pomyślnie zaktualizowano Pracownika", "");
+  }
+
+  private getRoles() {
+    this.roleService.list()
+      .subscribe((roles: any) => {
+        this.roles = roles;
+      })
   }
 
 }

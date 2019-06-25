@@ -4,6 +4,7 @@ import {HttpClient} from "@angular/common/http";
 import {NgbActiveModal, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {ToastrService} from "ngx-toastr";
 import {PaymentTypeService} from "../services/payment-type.service";
+import {AuthService} from "../services/auth.service";
 
 @Component({
   selector: 'app-payment-types',
@@ -15,6 +16,7 @@ export class PaymentTypesComponent implements OnInit {
 
   constructor(private http: HttpClient,
               private paymentTypeService: PaymentTypeService,
+              public authService: AuthService,
               private router: Router,
               private toastr: ToastrService,
               private modalService: NgbModal) {

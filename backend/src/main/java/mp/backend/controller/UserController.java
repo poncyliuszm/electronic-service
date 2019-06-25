@@ -7,6 +7,7 @@ import mp.backend.repository.ClientRepository;
 import mp.backend.repository.UserRepository;
 import mp.backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -28,6 +29,11 @@ public class UserController {
         this.clientRepository = clientRepository;
     }
 
+    @GetMapping("/currentUser")
+    public User getCurrentUser() {
+        return userService.getCurrentUser();
+    }
+
     @GetMapping("/list")
     public List<User> list() {
         return userRepository.findAll();
@@ -43,6 +49,7 @@ public class UserController {
     public void save(@RequestBody User user) {
         Client clientSaved = clientRepository.save(user.getClient());
         user.setClientId(clientSaved.getId());
+        user.setPassword(new BCryptPasswordEncoder().encode(user.getPassword()));
         userRepository.save(user);
     }
 

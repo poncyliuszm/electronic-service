@@ -33,7 +33,10 @@
         <button (click)="previewDocument(document)" class="btn btn-primary" type="button">Szczegóły</button>
         <button (click)="editDocument(document)" class="btn btn-warning" style="margin-left:5px;" type="button">Edytuj
         </button>
-        <button (click)="open(document)" class="btn btn-danger" style="margin-left:5px;" type="button">Usuń</button>
+        <button (click)="open(document)"
+                *ngIf="authService.currentUser?.role == 'ADMINISTRATOR'" class="btn btn-danger" style="margin-left:5px;"
+                type="button">Usuń
+        </button>
       </td>
     </tr>
     </tbody>

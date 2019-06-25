@@ -4,6 +4,7 @@ import {HttpClient} from "@angular/common/http";
 import {ClientService} from "../services/client.service";
 import {NgbActiveModal, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {ToastrService} from "ngx-toastr";
+import {AuthService} from "../services/auth.service";
 
 @Component({
   selector: 'app-clients',
@@ -15,6 +16,7 @@ export class ClientsComponent implements OnInit {
 
   constructor(private http: HttpClient,
               private clientService: ClientService,
+              public authService: AuthService,
               private router: Router,
               private toastr: ToastrService,
               private modalService: NgbModal) {

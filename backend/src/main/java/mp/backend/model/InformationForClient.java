@@ -11,11 +11,11 @@ public class InformationForClient {
     @Column(name = "ID_INFO_DLA_KLIENTA")
     private Integer id;
 
-    @Column(name = "ID_ZECENIE")
+    @Column(name = "ID_ZLECENIE")
     private Integer orderId;
 
     @ManyToOne
-    @JoinColumn(name = "ID_ZECENIE", updatable = false, insertable = false)
+    @JoinColumn(name = "ID_ZLECENIE", updatable = false, insertable = false)
     private Order order;
 
     @Column(name = "ID_PRACOWNIK")

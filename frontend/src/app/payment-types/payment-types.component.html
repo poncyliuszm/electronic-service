@@ -25,7 +25,9 @@
         <button (click)="editPaymentType(paymentType)" class="btn btn-warning" style="margin-left:5px;" type="button">
           Edytuj
         </button>
-        <button (click)="open(paymentType)" class="btn btn-danger" style="margin-left:5px;" type="button">Usuń</button>
+        <button (click)="open(paymentType)" *ngIf="authService.currentUser?.role == 'ADMINISTRATOR'"
+                class="btn btn-danger" style="margin-left:5px;" type="button">Usuń
+        </button>
       </td>
     </tr>
     </tbody>

@@ -24,6 +24,9 @@ public class User {
     @Column(name = "HASLO")
     private String password;
 
+    @Column(name = "FUNKCJA")
+    private String role;
+
     public Integer getId() {
         return id;
     }
@@ -62,5 +65,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }

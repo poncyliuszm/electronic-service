@@ -4,6 +4,7 @@ import {HttpClient} from "@angular/common/http";
 import {NgbActiveModal, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {ToastrService} from "ngx-toastr";
 import {InformationForClientService} from "../services/informationForClient.service";
+import {AuthService} from "../services/auth.service";
 
 @Component({
   selector: 'app-informations-for-client',
@@ -17,6 +18,7 @@ export class InformationsForClientComponent implements OnInit {
               private informationForClientService: InformationForClientService,
               private router: Router,
               private toastr: ToastrService,
+              public authService: AuthService,
               private modalService: NgbModal) {
   }
 

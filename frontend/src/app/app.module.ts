@@ -3,12 +3,11 @@ import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {HomeComponent} from './home/home.component';
 import {ClientDeleteModal, ClientsComponent} from './clients/clients.component';
 import {ClientAddComponent} from './clients/client-add/client-add.component';
 import {ClientEditComponent} from './clients/client-edit/client-edit.component';
 import {ClientService} from "./services/client.service";
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import {ClientPreviewComponent} from './clients/client-preview/client-preview.component';
 import {ToastrModule} from "ngx-toastr";
@@ -85,11 +84,16 @@ import {
   InformationsForClientComponent
 } from "./informations-for-client/informations-for-client.component";
 import {InformationForClientService} from "./services/informationForClient.service";
+import {LoginComponent} from './login/login.component';
+import {AuthService} from "./services/auth.service";
+import {AuthGuard} from "./services/auth-guard.service";
+import {InterceptService} from "./services/interceptService";
+import {LoaderService} from "./services/LoaderService";
+import {RoleService} from "./services/role.service";
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     ClientsComponent,
     ClientAddComponent,
     ClientEditComponent,
@@ -159,7 +163,8 @@ import {InformationForClientService} from "./services/informationForClient.servi
     InformationsForClientComponent,
     InformationForClientAddComponent,
     InformationForClientEditComponent,
-    InformationForClientPreviewComponent
+    InformationForClientPreviewComponent,
+    LoginComponent
   ],
   entryComponents: [
     ClientDeleteModal,
@@ -191,6 +196,10 @@ import {InformationForClientService} from "./services/informationForClient.servi
     })
   ],
   providers: [
+    AuthService,
+    AuthGuard,
+    InterceptService,
+    LoaderService,
     ClientService,
     CategoryService,
     ProducerService,
@@ -205,7 +214,9 @@ import {InformationForClientService} from "./services/informationForClient.servi
     PartService,
     ElectronicServiceService,
     InformationForClientService,
-    {provide: NgbDateAdapter, useClass: NgbDateNativeAdapter}
+    RoleService,
+    {provide: NgbDateAdapter, useClass: NgbDateNativeAdapter},
+    {provide: HTTP_INTERCEPTORS, useClass: InterceptService, multi: true}
   ],
   bootstrap: [AppComponent]
 })

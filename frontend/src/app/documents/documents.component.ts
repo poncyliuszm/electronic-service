@@ -4,6 +4,7 @@ import {HttpClient} from "@angular/common/http";
 import {DocumentService} from "../services/document.service";
 import {NgbActiveModal, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {ToastrService} from "ngx-toastr";
+import {AuthService} from "../services/auth.service";
 
 @Component({
   selector: 'app-documents',
@@ -17,6 +18,7 @@ export class DocumentsComponent implements OnInit {
               private documentService: DocumentService,
               private router: Router,
               private toastr: ToastrService,
+              public authService: AuthService,
               private modalService: NgbModal) {
   }
 

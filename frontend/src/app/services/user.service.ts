@@ -28,4 +28,8 @@ export class UserService {
   delete(id: any) {
     return this.http.delete(environment.appContext + '/user/' + id);
   }
+
+  getRoles() {
+    return this.http.get(environment.appContext + '/role/list');
+  }
 }

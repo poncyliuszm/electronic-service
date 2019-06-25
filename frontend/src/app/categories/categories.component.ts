@@ -4,6 +4,7 @@ import {HttpClient} from "@angular/common/http";
 import {NgbActiveModal, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {ToastrService} from "ngx-toastr";
 import {CategoryService} from "../services/category.service";
+import {AuthService} from "../services/auth.service";
 
 @Component({
   selector: 'app-categories',
@@ -15,6 +16,7 @@ export class CategoriesComponent implements OnInit {
 
   constructor(private http: HttpClient,
               private categoryService: CategoryService,
+              public authService: AuthService,
               private router: Router,
               private toastr: ToastrService,
               private modalService: NgbModal) {

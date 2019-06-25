@@ -1,15 +1,17 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav *ngIf="router.url !== '/login'" class="navbar navbar-expand-sm bg-dark navbar-dark">
   <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" routerLink="">Strona startowa</a>
-    </li>
-    <li class="nav-item">
+    <li
+      *ngIf="authService.currentUser?.role == 'ADMINISTRATOR' || authService.currentUser?.role == 'SERWISANT' || authService.currentUser?.role == 'KASJER'"
+      class="nav-item">
       <a class="nav-link" routerLink="/clients">Klienci</a>
     </li>
-    <li class="nav-item">
+    <li
+      *ngIf="authService.currentUser?.role == 'ADMINISTRATOR' || authService.currentUser?.role == 'SERWISANT' || authService.currentUser?.role == 'KASJER'"
+      class="nav-item">
       <a class="nav-link" routerLink="/products">Produkty</a>
     </li>
-    <li class="nav-item">
+    <li *ngIf="authService.currentUser?.role == 'ADMINISTRATOR' || authService.currentUser?.role == 'SERWISANT'"
+        class="nav-item">
       <a class="nav-link" routerLink="/categories">Kategorie</a>
     </li>
     <li class="nav-item">
@@ -44,6 +46,10 @@
     </li>
     <li class="nav-item">
       <a class="nav-link" routerLink="/operations">Usługi</a>
+    </li>
+    <li style="margin-left: 30px; margin-top: 5px;">
+      <i (click)="logout()" aria-hidden="true" class="nav-item fa fa-sign-out fa-2x"
+         style="color: coral; cursor: pointer !important;"></i>
     </li>
   </ul>
 </nav>

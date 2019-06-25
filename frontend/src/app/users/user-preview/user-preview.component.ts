@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {UserService} from "../../services/user.service";
+import {RoleService} from "../../services/role.service";
 
 @Component({
   selector: 'app-client-preview',
@@ -8,6 +9,8 @@ import {UserService} from "../../services/user.service";
   styleUrls: ['./user-preview.component.css']
 })
 export class UserPreviewComponent implements OnInit {
+
+  roles;
 
   client = {
     name: "",
@@ -29,18 +32,21 @@ export class UserPreviewComponent implements OnInit {
   user = {
     login: "",
     password: "",
+    role: "",
     client: this.client
   };
 
   userId;
 
   constructor(private userService: UserService,
+              private roleService: RoleService,
               private router: Router,
               private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit() {
     this.getUser();
+    this.getRoles();
   }
 
   getUser() {
@@ -51,6 +57,13 @@ export class UserPreviewComponent implements OnInit {
           this.user = user;
         })
     });
+  }
+
+  private getRoles() {
+    this.roleService.list()
+      .subscribe((roles: any) => {
+        this.roles = roles;
+      })
   }
 
 }

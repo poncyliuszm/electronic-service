@@ -4,7 +4,10 @@
 
 <div class="container" style="margin-top: 40px;">
 
-  <button type="button" class="btn btn-info float-right" style="margin-bottom: 20px; margin-right: 75px;" routerLink="/clients/add">
+  <button
+    *ngIf="authService.currentUser?.role == 'ADMINISTRATOR' || authService.currentUser?.role == 'SERWISANT' || authService.currentUser?.role == 'KASJER'"
+    class="btn btn-info float-right" routerLink="/clients/add" style="margin-bottom: 20px; margin-right: 75px;"
+    type="button">
     Dodaj klienta
   </button>
 
@@ -32,8 +35,16 @@
       <td>{{client.email}}</td>
       <td>
         <button type="button" class="btn btn-primary" (click)="previewClient(client)">Szczegóły</button>
-        <button type="button" class="btn btn-warning" style="margin-left:5px;" (click)="editClient(client)">Edytuj</button>
-        <button type="button" class="btn btn-danger" (click)="open(client)" style="margin-left:5px;">Usuń</button>
+        <button
+          (click)="editClient(client)"
+          *ngIf="authService.currentUser?.role == 'ADMINISTRATOR' || authService.currentUser?.role == 'SERWISANT' || authService.currentUser?.role == 'KASJER'"
+          class="btn btn-warning" style="margin-left:5px;" type="button">Edytuj
+        </button>
+        <button
+          (click)="open(client)"
+          *ngIf="authService.currentUser?.role == 'ADMINISTRATOR'" class="btn btn-danger" style="margin-left:5px;"
+          type="button">Usuń
+        </button>
       </td>
     </tr>
     </tbody>

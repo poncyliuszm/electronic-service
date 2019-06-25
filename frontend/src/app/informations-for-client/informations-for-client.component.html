@@ -7,7 +7,7 @@
   <button class="btn btn-info float-right" routerLink="/informationsForClient/add"
           style="margin-bottom: 20px; margin-right: 75px;"
           type="button">
-    Dodaj informjację dla klienta
+    Dodaj informację dla klienta
   </button>
 
   <table class="table table-hover" style="margin-top: 10px;">
@@ -31,10 +31,14 @@
         <button (click)="previewInformationForClient(informationForClient)" class="btn btn-primary" type="button">
           Szczegóły
         </button>
-        <button (click)="editInformationForClient(informationForClient)" class="btn btn-warning"
+        <button (click)="editInformationForClient(informationForClient)"
+                *ngIf="authService.currentUser?.role == 'ADMINISTRATOR' || authService.currentUser?.role == 'SERWISANT'"
+                class="btn btn-warning"
                 style="margin-left:5px;" type="button">Edytuj
         </button>
-        <button (click)="open(informationForClient)" class="btn btn-danger" style="margin-left:5px;" type="button">
+        <button (click)="open(informationForClient)"
+                *ngIf="authService.currentUser?.role == 'ADMINISTRATOR' || authService.currentUser?.role == 'SERWISANT'"
+                class="btn btn-danger" style="margin-left:5px;" type="button">
           Usuń
         </button>
       </td>

@@ -4,6 +4,7 @@ import {HttpClient} from "@angular/common/http";
 import {NgbActiveModal, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {ToastrService} from "ngx-toastr";
 import {ProducerService} from "../services/producer.service";
+import {AuthService} from "../services/auth.service";
 
 @Component({
   selector: 'app-producers',
@@ -17,6 +18,7 @@ export class ProducersComponent implements OnInit {
               private producerService: ProducerService,
               private router: Router,
               private toastr: ToastrService,
+              public authService: AuthService,
               private modalService: NgbModal) {
   }
 
